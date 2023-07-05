@@ -7,6 +7,10 @@ pluginManagement {
     }
 }
 
-include("common")
-include("fabric")
-include("forge")
+include("ct-api-common")
+include("ct-api-fabric")
+include("ct-api-forge")
+
+project(':ct-api-common').setProjectDir(new File("common"))
+project(':ct-api-forge').setProjectDir(new File("forge"))
+project(':ct-api-fabric').setProjectDir(new File("fabric"))
