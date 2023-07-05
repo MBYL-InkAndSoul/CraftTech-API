@@ -14,14 +14,14 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ResourceUtil {
     public static ResourceLocation of(String id){
-        return new ResourceLocation(ModInfo.MOD_ID, id);
+        return new ResourceLocation(CT_API.MOD_ID, id);
     }
 
     /**
      * TODO: Forge Platform!
      */
     public static ResourceLocation ofTag(String id){
-        return new ResourceLocation(ModInfo.MOD_ID, id);
+        return new ResourceLocation(CT_API.MOD_ID, id);
     }
 
     public static ModelResourceLocation ofModel(String id, String varint){

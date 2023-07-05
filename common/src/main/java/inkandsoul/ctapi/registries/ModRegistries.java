@@ -6,8 +6,7 @@ import com.google.common.base.Suppliers;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrarManager;
-import inkandsoul.crafttech.ModInfo;
-import inkandsoul.crafttech.registry.ModMaterials;
+import inkandsoul.ctapi.CT_API;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -17,15 +16,15 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 public final class ModRegistries {
 
     public static final Supplier<RegistrarManager> MANAGER = Suppliers
-            .memoize(() -> RegistrarManager.get(ModInfo.MOD_ID));
+            .memoize(() -> RegistrarManager.get(CT_API.MOD_ID));
 
-    public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(ModInfo.MOD_ID,
+    public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(CT_API.MOD_ID,
             Registries.CREATIVE_MODE_TAB);
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ModInfo.MOD_ID, Registries.ITEM);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(CT_API.MOD_ID, Registries.ITEM);
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ModInfo.MOD_ID, Registries.BLOCK);
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ModInfo.MOD_ID,
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(CT_API.MOD_ID, Registries.BLOCK);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(CT_API.MOD_ID,
             Registries.BLOCK_ENTITY_TYPE);
 
     public static void init(){
@@ -35,9 +34,6 @@ public final class ModRegistries {
         TABS.register();
     }
 
-    public static void postInit(){
-        ModMaterials.postInit();
-    }
     //
     // I don't know why it's not work. 
     // Maybe 1.20 break it.

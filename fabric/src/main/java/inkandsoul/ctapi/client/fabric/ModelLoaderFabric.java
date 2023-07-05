@@ -1,11 +1,7 @@
 package inkandsoul.ctapi.client.fabric;
 
-import inkandsoul.crafttech.ModInfo;
 import org.jetbrains.annotations.Nullable;
 
-// import inkandsoul.crafttech.ModInfo;
-import inkandsoul.crafttech.ModLogger;
-import inkandsoul.crafttech.ModValues;
 import inkandsoul.ctapi.client.model.ModelLoader;
 import inkandsoul.ctapi.util.ResourceUtil;
 import net.fabricmc.fabric.api.client.model.ModelProviderContext;
@@ -27,7 +23,7 @@ public class ModelLoaderFabric implements ModelVariantProvider, ModelResourcePro
         //     // id[2] 指定紋理集
         //     // id[3] 指定部件
 
-        // if(modelId.getNamespace().equals(ModInfo.MOD_ID)) {
+        // if(modelId.getNamespace().equals(CT_API.MOD_ID)) {
             // if (ModValues.MODEL_DEBUG) {
             //     ModLogger.LOGGER.info("Loading model: {}", modelId);
             // }
@@ -43,7 +39,7 @@ public class ModelLoaderFabric implements ModelVariantProvider, ModelResourcePro
     @Override
     public @Nullable UnbakedModel loadModelResource(ResourceLocation resourceId, ModelProviderContext context) {
         // if(CTModelLoader.BUILTIN_JSON_MODEL.containsKey(resourceId)){
-        // if(ModValues.MODEL_DEBUG && resourceId.getNamespace().equals(ModInfo.MOD_ID)){
+        // if(ModValues.MODEL_DEBUG && resourceId.getNamespace().equals(CT_API.MOD_ID)){
         //     ModLogger.LOGGER.info("Loading model resource: {}", resourceId);
         // }
         if(ModelLoader.BUILTIN_JSON_R_MODEL.get(resourceId) != null){
