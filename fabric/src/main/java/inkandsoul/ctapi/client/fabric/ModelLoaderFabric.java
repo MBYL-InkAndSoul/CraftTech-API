@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.client;
+package inkandsoul.ctapi.client.fabric;
 
 import inkandsoul.crafttech.ModInfo;
 import org.jetbrains.annotations.Nullable;
@@ -27,16 +27,14 @@ public class ModelLoaderFabric implements ModelVariantProvider, ModelResourcePro
         //     // id[2] 指定紋理集
         //     // id[3] 指定部件
 
-        if(modelId.getNamespace().equals(ModInfo.MOD_ID)) {
-            if (ModValues.MODEL_DEBUG) {
-                ModLogger.LOGGER.info("Loading model: {}", modelId);
-            }
-            if (ModelLoader.BUILTIN_JSON_V_MODEL.get(modelId) != null) {
-                return ResourceUtil.loadJsonModelFromString(modelId, ModelLoader.BUILTIN_JSON_V_MODEL.get(modelId));
-            } else {
-                ModLogger.LOGGER.info("Missing model: {}", modelId);
-            }
+        // if(modelId.getNamespace().equals(ModInfo.MOD_ID)) {
+            // if (ModValues.MODEL_DEBUG) {
+            //     ModLogger.LOGGER.info("Loading model: {}", modelId);
+            // }
+        if (ModelLoader.BUILTIN_JSON_V_MODEL.get(modelId) != null) {
+            return ResourceUtil.loadJsonModelFromString(modelId, ModelLoader.BUILTIN_JSON_V_MODEL.get(modelId));
         }
+        // }
         return null;
         
     }
@@ -45,9 +43,9 @@ public class ModelLoaderFabric implements ModelVariantProvider, ModelResourcePro
     @Override
     public @Nullable UnbakedModel loadModelResource(ResourceLocation resourceId, ModelProviderContext context) {
         // if(CTModelLoader.BUILTIN_JSON_MODEL.containsKey(resourceId)){
-        if(ModValues.MODEL_DEBUG && resourceId.getNamespace().equals(ModInfo.MOD_ID)){
-            ModLogger.LOGGER.info("Loading model resource: {}", resourceId);
-        }
+        // if(ModValues.MODEL_DEBUG && resourceId.getNamespace().equals(ModInfo.MOD_ID)){
+        //     ModLogger.LOGGER.info("Loading model resource: {}", resourceId);
+        // }
         if(ModelLoader.BUILTIN_JSON_R_MODEL.get(resourceId) != null){
             return ResourceUtil.loadJsonModelFromString(resourceId, ModelLoader.BUILTIN_JSON_R_MODEL.get(resourceId));
         }

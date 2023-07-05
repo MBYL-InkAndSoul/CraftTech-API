@@ -12,7 +12,14 @@
   "icon": "icon.png",
 
   "environment": "*",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": [
+      "inkandsoul.ctapi.fabric.CT_API_FabricInit"
+    ],
+    "client": [
+      "inkandsoul.ctapi.client.fabric.CT_API_FabricClientInit"
+    ]
+  },
   "mixins": [
     "ctapi.mixins.json",
     "ctapi-common.mixins.json"

@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 
 /**
  * （Forge已修復）
- * <p>修復了Fabric/Quilt燃燒時間上限爲Short的問題，但可能會造成性能/存檔兼容問題。</p>
+ * <p>修復了Fabric/Quilt燃燒時間上限爲short的問題，但可能會造成性能/存檔兼容問題。</p>
  */
 @Mixin(AbstractFurnaceBlockEntity.class)
 public abstract class FurnaceBlockEntityMixin {

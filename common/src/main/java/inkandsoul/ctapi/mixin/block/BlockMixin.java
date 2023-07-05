@@ -1,33 +1,35 @@
 package inkandsoul.ctapi.mixin.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
-import inkandsoul.crafttech.ModValues;
 import inkandsoul.ctapi.block.EasilyBreak;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(BlockBehaviour.class)
 public class BlockMixin {
-    // @Inject(method = "getDestroyProgress", 
-    //         at = @At(value = "INVOKE", 
-    //             target = "Lnet/minecraft/world/entity/player/Player;hasCorrectToolForDrops(Lnet/minecraft/world/level/block/state/BlockState;)Z", 
-    //             shift = At.Shift.AFTER
-    //         ),
-    //         locals = LocalCapture.CAPTURE_FAILHARD,
-    //         cancellable = true)
 
     // 困難模式
-    @ModifyVariable(method = "getDestroyProgress", at = @At("STORE"), ordinal = 1)
-    public int overrideDestroyProgress(int i) {
+    @Inject(method = "getDestroyProgress", at = @At("RETURN"), cancellable = true)
+    public void overrideDestroyProgress(BlockState blockState,
+                                        Player player,
+                                        BlockGetter blockGetter,
+                                        BlockPos blockPos,
+                                        CallbackInfoReturnable<Float> ci){
         var self = (Block)(Object)this;
-        
+        float f = ci.getReturnValueF();
         if(!EasilyBreak.EVENT.invoker().applyHardcoreBreak(self)){
-            return (ModValues.HARDCORE_BREAK && i == 30 ? 0 : i);
+            ci.setReturnValue(f == 30f ? 0 : f);
         }else{
-            return i;
+            ci.setReturnValue(f);
         }
     }
 

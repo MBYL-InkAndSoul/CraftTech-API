@@ -48,9 +48,9 @@ public class ResourceUtil {
         String result = builder.append("}}").toString();
         result = result.replace(" ","");
         
-        if(ModValues.MODEL_DEBUG){
-            ModLogger.LOGGER.info("[CT+DEBUG]Generate Model:"+result);
-        }
+        // if(ModValues.MODEL_DEBUG){
+        //     ModLogger.LOGGER.info("[CT+DEBUG]Generate Model:"+result);
+        // }
 
         return result;
     }

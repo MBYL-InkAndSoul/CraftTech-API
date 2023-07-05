@@ -5,6 +5,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
 public class BaseBlockItem extends BlockItem implements IBaseItem {
     protected final MutableComponent name;
@@ -15,12 +16,12 @@ public class BaseBlockItem extends BlockItem implements IBaseItem {
     }
 
     @Override
-    public Component getDescription() {
+    public @NotNull Component getDescription() {
         return name;
     }
 
     @Override
-    public Component getName(ItemStack stack) {
+    public @NotNull Component getName(ItemStack stack) {
         return name;
     }
 }

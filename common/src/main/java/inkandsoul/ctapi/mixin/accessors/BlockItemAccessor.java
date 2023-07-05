@@ -12,5 +12,5 @@ import net.minecraft.world.level.block.state.BlockState;
 @Mixin(BlockItem.class)
 public interface BlockItemAccessor {
     @Invoker("updateBlockStateFromTag")
-    public abstract BlockState getBlockStateFromTag(BlockPos blockPos, Level level, ItemStack itemStack, BlockState blockState);
+    BlockState getBlockStateFromTag(BlockPos blockPos, Level level, ItemStack itemStack, BlockState blockState);
 }

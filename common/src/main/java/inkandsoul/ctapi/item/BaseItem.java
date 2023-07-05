@@ -4,6 +4,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * <p>僅BlockItem, NullItem與該類無關。</p>
@@ -20,12 +21,12 @@ public class BaseItem extends Item implements IBaseItem {
     }
 
     @Override
-    public Component getDescription() {
+    public @NotNull Component getDescription() {
         return name;
     }
 
     @Override
-    public Component getName(ItemStack stack) {
+    public @NotNull Component getName(ItemStack stack) {
         return name;
     }
     
