@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "ctapi",
+  "version": "${version}",
+
+  "name": "CT-API",
+  "description": "CT-API",
+  "authors": [],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [
+    "ctapi.mixins.json",
+    "ctapi-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": ">=1.20"
+  }
+}
