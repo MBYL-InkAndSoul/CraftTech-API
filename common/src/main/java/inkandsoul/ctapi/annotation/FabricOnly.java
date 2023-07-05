@@ -1,0 +1,14 @@
+package inkandsoul.ctapi.annotation;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/**
+ * 用于注明一个处于common中的方法、类、字段的运行环境为Fabric
+ */
+@Documented
+@Retention(RetentionPolicy.SOURCE)
+public @interface FabricOnly {
+    boolean includedQuilt() default true;
+}
