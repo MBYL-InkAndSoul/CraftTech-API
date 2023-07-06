@@ -25,8 +25,8 @@ public class CT_API {
 	public static void init() {
 		ModMachines.init();
 		ModRegistries.init();
-		var model = ResourceUtil.generateItemModelNew(new String[]{"ctapi:item/test"});
-		ModelLoader.registerJson(CT_API.LOCATION.ofModel("test", "inventory"), model);
+		// var model = ResourceUtil.generateItemModelNew(new String[]{"ctapi:item/test"});
+		// ModelLoader.registerJson(CT_API.LOCATION.ofModel("test", "inventory"), model);
 	}
 
 	public static final Item MODEL_ITEM = new ModelItem();
