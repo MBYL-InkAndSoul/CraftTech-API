@@ -11,7 +11,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class MachineBlock extends BaseBlock implements EntityBlock {
 
-    Machine machine;
+    final Machine machine;
 
     public MachineBlock(Properties properties, Machine machine) {
         super(properties);

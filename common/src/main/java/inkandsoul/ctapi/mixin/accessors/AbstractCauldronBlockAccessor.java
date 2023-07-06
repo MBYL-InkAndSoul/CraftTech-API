@@ -11,5 +11,5 @@ import net.minecraft.world.level.block.state.BlockState;
 @Mixin(AbstractCauldronBlock.class)
 public interface AbstractCauldronBlockAccessor {
 	@Invoker("isEntityInsideContent")
-	public boolean isEntityTouchingFluid(BlockState state, BlockPos pos, Entity entity);
+	boolean isEntityTouchingFluid(BlockState state, BlockPos pos, Entity entity);
 }

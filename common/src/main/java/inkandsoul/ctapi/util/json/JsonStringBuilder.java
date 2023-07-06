@@ -5,7 +5,7 @@ package inkandsoul.ctapi.util.json;
  */
 @Deprecated
 public class JsonStringBuilder {
-    private StringBuilder json;
+    private final StringBuilder json;
 
     public JsonStringBuilder() {
         json = new StringBuilder();

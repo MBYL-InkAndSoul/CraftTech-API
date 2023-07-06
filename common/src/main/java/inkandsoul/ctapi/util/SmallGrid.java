@@ -31,7 +31,7 @@ import net.minecraft.core.NonNullList;
  */
 public class SmallGrid<T> {
     
-    private NonNullList<T> map;
+    private final NonNullList<T> map;
 
     public SmallGrid(byte heigth, byte widgth, T defaultValue){
         map = NonNullList.withSize(widgth*heigth, defaultValue);

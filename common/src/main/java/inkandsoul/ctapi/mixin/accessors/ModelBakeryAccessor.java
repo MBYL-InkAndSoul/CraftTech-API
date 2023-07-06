@@ -17,20 +17,20 @@ import net.minecraft.resources.ResourceLocation;
 public interface ModelBakeryAccessor {
     @Final
     @Accessor("modelResources")
-    public Map<ResourceLocation, BlockModel> getModelResources();
+    Map<ResourceLocation, BlockModel> getModelResources();
 
     @Final
     @Accessor("unbakedCache")
-    public Map<ResourceLocation, UnbakedModel> getUnbakedCache();
+    Map<ResourceLocation, UnbakedModel> getUnbakedCache();
 
     @Final
     @Accessor("topLevelModels")
-    public Map<ResourceLocation, UnbakedModel> getTopLevelModels();
+    Map<ResourceLocation, UnbakedModel> getTopLevelModels();
 
     @Final
     @Accessor("bakedTopLevelModels")
-    public Map<ResourceLocation, BakedModel> getBakedTopLevelModels();
+    Map<ResourceLocation, BakedModel> getBakedTopLevelModels();
 
     @Accessor("ITEM_MODEL_GENERATOR")
-    public ItemModelGenerator getItemModelGenerator();
+    ItemModelGenerator getItemModelGenerator();
 }

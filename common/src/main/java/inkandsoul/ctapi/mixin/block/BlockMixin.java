@@ -7,7 +7,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 import inkandsoul.ctapi.block.EasilyBreak;
 import net.minecraft.world.level.block.Block;
@@ -18,6 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class BlockMixin {
 
     // 困難模式
+    @SuppressWarnings("DataFlowIssue")
     @Inject(method = "getDestroyProgress", at = @At("RETURN"), cancellable = true)
     public void overrideDestroyProgress(BlockState blockState,
                                         Player player,

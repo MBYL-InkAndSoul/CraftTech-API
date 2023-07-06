@@ -2,6 +2,7 @@ package inkandsoul.ctapi.mixin.data;
 
 import java.util.Map;
 
+import inkandsoul.ctapi.CT_API;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -9,7 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import inkandsoul.ctapi.util.ResourceUtil;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.profiling.ProfilerFiller;
@@ -22,6 +22,6 @@ public class RecipeAddHooks {
 						  ProfilerFiller profiler, CallbackInfo ci) {
 		var testRecipe = new JsonObject();
 		testRecipe.addProperty("null", "null");
-		map.put(ResourceUtil.of("test"), testRecipe);
+		map.put(CT_API.LOCATION.of("test"), testRecipe);
 	}
 }

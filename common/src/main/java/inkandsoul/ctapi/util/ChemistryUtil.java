@@ -2,8 +2,9 @@ package inkandsoul.ctapi.util;
 
 public final class ChemistryUtil {
     /**
-     * @param formula
-     * @return
+     * Format formula numbers.
+     * @param formula Need to format formula.
+     * @return Formatted formula.
      */
     public static String formatNumber(String formula){
         // ₀₁₂₃₄₅₆₇₈₉

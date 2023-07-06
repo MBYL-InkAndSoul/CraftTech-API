@@ -5,7 +5,7 @@ public final class TimeUtil {
 		return (int)(s*20);
 	}
 	public static float tickToSec(int t){
-		return (t/20);
+		return ((float) t /20);
 	}
 
 	public static String tickToSecIntoString(float t){

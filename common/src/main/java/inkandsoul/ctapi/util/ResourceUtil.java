@@ -11,19 +11,41 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 
 public class ResourceUtil {
-    public static ResourceLocation of(String id){
+    public static class Location{
+
+        public final String MOD_ID;
+
+        public Location(String MOD_ID) {
+            this.MOD_ID = MOD_ID;
+        }
+
+        public ResourceLocation of(String id){
+            return new ResourceLocation(MOD_ID, id);
+        }
+
+        /**
+         * TODO: Forge Platform!
+         */
+        public ResourceLocation ofTag(String id){
+            return new ResourceLocation(MOD_ID, id);
+        }
+    }
+
+    @Deprecated
+    public ResourceLocation of(String id){
         return new ResourceLocation(CT_API.MOD_ID, id);
     }
 
     /**
      * TODO: Forge Platform!
      */
-    public static ResourceLocation ofTag(String id){
+    @Deprecated
+    public ResourceLocation ofTag(String id){
         return new ResourceLocation(CT_API.MOD_ID, id);
     }
 
-    public static ModelResourceLocation ofModel(String id, String varint){
-        return new ModelResourceLocation(of(id), varint);
+    public static ModelResourceLocation ofModel(String id, String variant){
+        return new ModelResourceLocation(CT_API.LOCATION.of(id), variant);
     }
 
     public static BlockModel loadJsonModelFromString(ResourceLocation id, String model){

@@ -10,9 +10,9 @@ import net.minecraft.world.level.block.Block;
  * 用於處理特殊情況
  */
 public interface EasilyBreak {
-    public static final Event<EasilyBreak> EVENT = EventFactory.createEventResult(EasilyBreak.class);
+    Event<EasilyBreak> EVENT = EventFactory.createEventResult(EasilyBreak.class);
 
-    public boolean applyHardcoreBreak(Block block);
+    boolean applyHardcoreBreak(Block block);
 }
 
 class DefaultBreak {

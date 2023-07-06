@@ -12,7 +12,8 @@ import net.minecraft.world.level.block.AbstractCauldronBlock;
 
 @Mixin(ItemEntity.class)
 public class WashableHooks {
-    @Inject(method = "tick", at = @At("HEAD"))
+    @SuppressWarnings("DataFlowIssue")
+	@Inject(method = "tick", at = @At("HEAD"))
 	public void washItemHooks(CallbackInfo ci) {
 		var self = (ItemEntity) (Object) this;
 		var world = self.getCommandSenderWorld();
