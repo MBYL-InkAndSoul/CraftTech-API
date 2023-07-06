@@ -2,6 +2,12 @@ package inkandsoul.ctapi.util;
 
 import java.util.Objects;
 
+/*
+ * I forget how I got this...(Translate JavaScript into Java)
+ * If you are original JS source author.
+ * Please tell me! I will note your info!
+*/
+
 public final class NumberUtil {
 	/*
 	 * I = 1 V = 5 X = 10 L = 50 C = 100 D = 500 M = 1000
