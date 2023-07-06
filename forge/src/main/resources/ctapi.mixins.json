@@ -1,11 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "inkandsoul.ctapi.ctapi.mixin.forge",
+  "package": "inkandsoul.ctapi.mixin.forge",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
   "client": [
+    "ModelLoaderHooks"
   ],
   "injectors": {
     "defaultRequire": 1

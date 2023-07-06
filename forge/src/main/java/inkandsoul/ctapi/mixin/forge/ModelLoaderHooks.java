@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
@@ -33,7 +34,7 @@ public class ModelLoaderHooks {
         at = @At(value = "INVOKE", target = "Ljava/util/Objects;equals(Ljava/lang/Object;Ljava/lang/Object;)Z"),
         cancellable = true, locals = LocalCapture.CAPTURE_FAILEXCEPTION)
     public void loadModelHooks(ResourceLocation arg,
-                               CallbackInfoReturnable<UnbakedModel> ci,
+                               CallbackInfo ci,
                                ModelResourceLocation marg){
         if (ModelLoader.BUILTIN_JSON_V_MODEL.containsKey(marg)) {
             unbakedCache.put(arg,

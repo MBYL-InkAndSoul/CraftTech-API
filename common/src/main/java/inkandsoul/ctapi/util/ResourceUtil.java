@@ -6,6 +6,7 @@ import inkandsoul.ctapi.CT_API;
 import inkandsoul.ctapi.util.json.JsonObjectBuilder;
 import inkandsoul.ctapi.util.model.BlockModels;
 import inkandsoul.ctapi.util.model.ItemModels;
+import net.minecraft.client.model.Model;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
@@ -21,6 +22,10 @@ public class ResourceUtil {
 
         public ResourceLocation of(String id){
             return new ResourceLocation(MOD_ID, id);
+        }
+
+        public ModelResourceLocation ofModel(String id, String v){
+            return new ModelResourceLocation(MOD_ID, id, v);
         }
 
         /**
