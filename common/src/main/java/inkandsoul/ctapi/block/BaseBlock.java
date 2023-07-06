@@ -11,12 +11,19 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
+/**
+ * Extends {@link Block} class.
+ * <p>Contains some more features.</p>
+ */
 public class BaseBlock extends Block {
 
     public BaseBlock(Properties properties) {
         super(properties);
     }
-    
+
+    /**
+     * Always drop.
+     */
     @Override
     public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, 
             @Nullable BlockEntity blockEntity, ItemStack stack) {

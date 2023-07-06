@@ -26,7 +26,7 @@ public class ModelLoaderHooks {
     @Inject(method = "getModel", at = @At("HEAD"), cancellable = true)
     public void getModelHooks(ResourceLocation arg, CallbackInfoReturnable<UnbakedModel> ci){
         if (ModelLoader.BUILTIN_JSON_R_MODEL.containsKey(arg)) {
-            ci.setReturnValue(ResourceUtil.loadJsonModelFromString(arg, ModelLoader.BUILTIN_JSON_R_MODEL.get(arg)));
+            ci.setReturnValue(ResourceUtil.loadJsonModelFromString(arg, ModelLoader.BUILTIN_JSON_R_MODEL.get(arg).toString()));
         }
     }
 
@@ -38,7 +38,7 @@ public class ModelLoaderHooks {
                                ModelResourceLocation marg){
         if (ModelLoader.BUILTIN_JSON_V_MODEL.containsKey(marg)) {
             unbakedCache.put(arg,
-                ResourceUtil.loadJsonModelFromString(marg, ModelLoader.BUILTIN_JSON_V_MODEL.get(marg)));
+                ResourceUtil.loadJsonModelFromString(marg, ModelLoader.BUILTIN_JSON_V_MODEL.get(marg).toString()));
             ci.cancel();
         }
     }

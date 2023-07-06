@@ -1,7 +1,6 @@
 package inkandsoul.ctapi.mixin.client.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import inkandsoul.ctapi.event.ItemStackEvents;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.resources.model.BakedModel;
@@ -43,6 +42,6 @@ public class ItemRendererMixin {
                             BakedModel bm,
                             CallbackInfo ci)
     {
-        ItemStackEvents.RenderEnd.EVENT.invoker().render(stack, dc, bl, pose, mbs, i, j, bm);
+
     }
 }

@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.item;
+package inkandsoul.ctapi.event.item;
 
 import dev.architectury.event.Event;
 import dev.architectury.event.EventFactory;
@@ -9,6 +9,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
+/**
+ * Allows you to define action when item is in fluid of cauldron.
+ */
 public interface Washable {
 	Event<Washable> EVENT = EventFactory.createEventResult(Washable.class);
 

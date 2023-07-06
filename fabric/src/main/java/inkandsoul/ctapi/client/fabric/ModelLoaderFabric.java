@@ -13,9 +13,6 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ModelLoaderFabric implements ModelVariantProvider, ModelResourceProvider {
 
-    /**
-     * 用於處理方塊狀態
-     */
     @Override
     public @Nullable UnbakedModel loadModelVariant(ModelResourceLocation modelId, ModelProviderContext context) {
         //     // 需求格式："crafttech:material.<item/block>.<texture_set>.<part>"
@@ -28,14 +25,13 @@ public class ModelLoaderFabric implements ModelVariantProvider, ModelResourcePro
             //     ModLogger.LOGGER.info("Loading model: {}", modelId);
             // }
         if (ModelLoader.BUILTIN_JSON_V_MODEL.get(modelId) != null) {
-            return ResourceUtil.loadJsonModelFromString(modelId, ModelLoader.BUILTIN_JSON_V_MODEL.get(modelId));
+            return ResourceUtil.loadJsonModelFromString(modelId, ModelLoader.BUILTIN_JSON_V_MODEL.get(modelId).toString());
         }
         // }
         return null;
         
     }
 
-    // 说实话这个方法我也没搞明白有什么用，但就先这样吧（）
     @Override
     public @Nullable UnbakedModel loadModelResource(ResourceLocation resourceId, ModelProviderContext context) {
         // if(CTModelLoader.BUILTIN_JSON_MODEL.containsKey(resourceId)){
@@ -43,7 +39,7 @@ public class ModelLoaderFabric implements ModelVariantProvider, ModelResourcePro
         //     ModLogger.LOGGER.info("Loading model resource: {}", resourceId);
         // }
         if(ModelLoader.BUILTIN_JSON_R_MODEL.get(resourceId) != null){
-            return ResourceUtil.loadJsonModelFromString(resourceId, ModelLoader.BUILTIN_JSON_R_MODEL.get(resourceId));
+            return ResourceUtil.loadJsonModelFromString(resourceId, ModelLoader.BUILTIN_JSON_R_MODEL.get(resourceId).toString());
         }
         return null;
     }

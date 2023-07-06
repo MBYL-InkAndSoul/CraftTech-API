@@ -5,8 +5,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 
 /**
- * <p>務必覆蓋該接口的所有方法</p>
- * <br>
  * <p>Must override methods.</p>
  */
 @MustOverride

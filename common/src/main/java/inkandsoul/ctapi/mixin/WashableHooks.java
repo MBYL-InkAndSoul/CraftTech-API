@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import inkandsoul.ctapi.item.Washable;
+import inkandsoul.ctapi.event.item.Washable;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.level.block.AbstractCauldronBlock;
 

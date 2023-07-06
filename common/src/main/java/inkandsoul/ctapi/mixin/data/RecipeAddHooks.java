@@ -1,7 +1,7 @@
 package inkandsoul.ctapi.mixin.data;
 
 import com.google.gson.JsonElement;
-import inkandsoul.ctapi.recipe.RecipeLoader;
+import inkandsoul.ctapi.data.recipe.RecipeLoader;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.util.profiling.ProfilerFiller;

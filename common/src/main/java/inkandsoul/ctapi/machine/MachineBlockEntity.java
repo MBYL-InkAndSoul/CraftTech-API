@@ -11,7 +11,4 @@ public class MachineBlockEntity extends BaseBlockEntity {
         super(blockPos, blockState);
     }
 
-    public void tick(Level level, BlockPos pos, BlockState state, MachineBlockEntity self){
-
-    }
 }
