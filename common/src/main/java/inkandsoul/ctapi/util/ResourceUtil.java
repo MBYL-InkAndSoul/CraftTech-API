@@ -32,7 +32,7 @@ public class ResourceUtil {
     }
 
     @Deprecated
-    public ResourceLocation of(String id){
+    public static ResourceLocation of(String id){
         return new ResourceLocation(CT_API.MOD_ID, id);
     }
 
@@ -40,7 +40,7 @@ public class ResourceUtil {
      * TODO: Forge Platform!
      */
     @Deprecated
-    public ResourceLocation ofTag(String id){
+    public static ResourceLocation ofTag(String id){
         return new ResourceLocation(CT_API.MOD_ID, id);
     }
 
