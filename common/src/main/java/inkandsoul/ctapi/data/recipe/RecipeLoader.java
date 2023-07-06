@@ -14,6 +14,7 @@ import net.minecraft.world.item.crafting.Recipe;
  *
  */
 public class RecipeLoader {
+
     private static final Map<ResourceLocation, JsonElement> RECIPES = new LinkedHashMap<>();
 
     /**
