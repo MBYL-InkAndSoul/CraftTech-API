@@ -1,6 +1,6 @@
 package inkandsoul.ctapi.mixin.forge;
 
-import inkandsoul.ctapi.client.model.ModelLoader;
+import inkandsoul.ctapi.client.data.model.ModelLoader;
 import inkandsoul.ctapi.util.ResourceUtil;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;

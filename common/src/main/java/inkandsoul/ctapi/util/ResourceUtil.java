@@ -80,6 +80,7 @@ public class ResourceUtil {
         return result;
     }
 
+    @Deprecated
     public static String generateModel(ResourceLocation parent, JsonObject textures){
         JsonObjectBuilder builder = new JsonObjectBuilder();
         builder.add("parent", parent.toString());
@@ -88,6 +89,7 @@ public class ResourceUtil {
         return builder.get().getAsJsonObject().toString();
     }
 
+    @Deprecated
     public static String generateModel(ResourceLocation parent, JsonObject textures, JsonArray elements){
         JsonObjectBuilder builder = new JsonObjectBuilder();
         builder.add("parent", parent.toString());
@@ -97,6 +99,7 @@ public class ResourceUtil {
         return builder.get().getAsJsonObject().toString();
     }
 
+    @Deprecated
     public static String generateItemModelNew(String[] layers){
         JsonObjectBuilder textures = new JsonObjectBuilder();
         for (int i = 0; i < layers.length; i++) {
@@ -106,6 +109,7 @@ public class ResourceUtil {
         return generateModel(ItemModels.GENERATE, textures.get().getAsJsonObject());
     }
 
+    @Deprecated
     public static String generateSimpleCubeModel(String all){
         return generateModel(BlockModels.CUBE_ALL,
                 new JsonObjectBuilder().add("all", all).get().getAsJsonObject());

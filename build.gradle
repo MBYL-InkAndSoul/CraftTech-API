@@ -15,8 +15,9 @@ subprojects {
     }
 
     repositories {
-        maven { // Flywheel
-            url = "https://maven.tterrag.com/"
+        maven {
+            name = "Modrinth"
+            url = "https://api.modrinth.com/maven"
         }
     }
 

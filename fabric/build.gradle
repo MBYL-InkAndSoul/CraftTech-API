@@ -23,6 +23,7 @@ dependencies {
 //1.1.50-MC1.19.2
 //    modImplementation(include("com.tterrag.registrate_fabric:Registrate:${rootProject.registrate_version}"))
 
+    modApi "maven.modrinth:forge-config-api-port:${rootProject.forge_config_version}"
     common(project(path: ":ct-api-common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":ct-api-common", configuration: "transformProductionFabric")) { transitive false }
 }

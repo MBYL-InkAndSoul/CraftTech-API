@@ -35,4 +35,14 @@ public class RecipeLoader {
     public static void onRecipeReload(Map<ResourceLocation, JsonElement> map){
         map.putAll(RECIPES);
     }
+
+    /* new ShapedRecipeBuilder(RecipeCategory.MISC, Items.AIR, 64)
+			.define('X', Items.DIRT)
+			.pattern(" X")
+			.pattern("  ")
+				.save(i->{
+						RecipeLoader.add(i.getId(), i.serializeRecipe());
+					},
+					LOCATION.of("test")
+				); */
 }
