@@ -3,6 +3,7 @@ package inkandsoul.ctapi.mixin.data;
 import java.util.Map;
 
 import inkandsoul.ctapi.CT_API;
+import inkandsoul.ctapi.recipe.RecipeLoader;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -20,8 +21,6 @@ public class RecipeAddHooks {
     @Inject(method = "apply*", at = @At("HEAD"))
 	protected void onReload(Map<ResourceLocation, JsonElement> map, ResourceManager resourceManager,
 						  ProfilerFiller profiler, CallbackInfo ci) {
-		var testRecipe = new JsonObject();
-		testRecipe.addProperty("null", "null");
-		map.put(CT_API.LOCATION.of("test"), testRecipe);
+		RecipeLoader.onRecipeReload(map);
 	}
 }
