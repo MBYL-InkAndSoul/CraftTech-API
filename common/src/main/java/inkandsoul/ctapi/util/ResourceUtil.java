@@ -1,6 +1,7 @@
 package inkandsoul.ctapi.util;
 
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import inkandsoul.ctapi.CT_API;
 import inkandsoul.ctapi.util.json.JsonObjectBuilder;
@@ -55,31 +56,31 @@ public class ResourceUtil {
         return blockModel;
     }
 
-    public static String generateModel(ResourceLocation parent){
+    public static JsonElement generateModel(ResourceLocation parent){
         JsonObjectBuilder builder = new JsonObjectBuilder();
         builder.add("parent", parent.toString());
 
-        return builder.get().getAsJsonObject().toString();
+        return builder.get().getAsJsonObject();
     }
 
-    public static String generateModel(ResourceLocation parent, JsonObject textures){
+    public static JsonElement generateModel(ResourceLocation parent, JsonObject textures){
         JsonObjectBuilder builder = new JsonObjectBuilder();
         builder.add("parent", parent.toString());
         builder.add("textures", textures);
 
-        return builder.get().getAsJsonObject().toString();
+        return builder.get().getAsJsonObject();
     }
 
-    public static String generateModel(ResourceLocation parent, JsonObject textures, JsonArray elements){
+    public static JsonElement generateModel(ResourceLocation parent, JsonObject textures, JsonArray elements){
         JsonObjectBuilder builder = new JsonObjectBuilder();
         builder.add("parent", parent.toString());
         builder.add("textures", textures);
         builder.add("elements", elements);
 
-        return builder.get().getAsJsonObject().toString();
+        return builder.get().getAsJsonObject();
     }
 
-    public static String generateItemModelNew(String[] layers){
+    public static JsonElement generateItemModelNew(String[] layers){
         JsonObjectBuilder textures = new JsonObjectBuilder();
         for (int i = 0; i < layers.length; i++) {
             textures.add("layer" + i, layers[i]);
@@ -88,7 +89,7 @@ public class ResourceUtil {
         return generateModel(ItemModels.GENERATE, textures.get().getAsJsonObject());
     }
 
-    public static String generateSimpleCubeModel(String all){
+    public static JsonElement generateSimpleCubeModel(String all){
         return generateModel(BlockModels.CUBE_ALL,
                 new JsonObjectBuilder().add("all", all).get().getAsJsonObject());
     }
