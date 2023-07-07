@@ -12,7 +12,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.RegisterEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,20 +25,27 @@ public class CT_API_ForgeInit {
     public CT_API_ForgeInit() {
 		// Submit our event bus to let architectury register our content on the right time
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        // bus.addListener(CT_API_ForgeInit::commonInit);
+
+        bus.addListener(this::init);
+        bus.addListener(this::regInit);
+        bus.addListener(this::warn);
+
         EventBuses.registerModEventBus(CT_API.MOD_ID, bus);
+
+        ModRegistries.init();
     }
 
-    @SubscribeEvent
-    public static void commonInit(final FMLCommonSetupEvent event){
+    public void regInit(final RegisterEvent event){
         CT_API.init();
     }
 
-    // public static final List<RegistrySupplier<Item>> ITEMS = new ArrayList<>();
-    // public static final RegistrySupplier<Item> TEST = ModRegistries.ITEMS.register("test", () -> new BaseItem(Component.literal("Forge Test"), new Item.Properties()));
-    //
-    // static{
-    //     ITEMS.add(TEST);
-    // }
+    public void init(final FMLCommonSetupEvent event) {
+
+    }
+
+    public void warn(final FMLLoadCompleteEvent event) {
+        CT_API.LOGGER.warn("[CT-API]Forge support is not in plan!");
+        CT_API.LOGGER.warn("[CT-API]Maybe will catch a lot of problems!");
+    }
 
 }

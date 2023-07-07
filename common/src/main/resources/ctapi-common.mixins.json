@@ -9,7 +9,7 @@
     "accessors.BlockItemAccessor",
     "block.BlockMixin",
     "data.DataPackHooks",
-    "data.RecipeAddHooks",
+    "data.RecipeAddHooks"
   ],
   "client": [
     "accessors.ItemRendererAccessors",

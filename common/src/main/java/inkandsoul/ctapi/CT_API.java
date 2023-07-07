@@ -20,12 +20,12 @@ public class CT_API {
 
 	public static void init() {
 		ModMachines.init();
-		ModRegistries.init();
-
 	}
 
-	public static final Item MODEL_ITEM = new ModelItem();
+	public static final Item MODEL_ITEM = ModelItem.of();
 	public static final RegistrySupplier<Item> MODEL = ModRegistries.ITEMS.register("model_item", () -> MODEL_ITEM);
+
+	// public static final RegistrySupplier<Item> MODEL = ModRegistries.ITEMS.register("model_item", () -> MODEL_ITEM);
 	// public static final CreativeModeTab ITEM_TAB = CreativeTabRegistry.create(builder -> {
 	// 	builder.title(Component.literal("CT-API"));
 	// 	builder.displayItems((idp, items) -> items.accept(MODEL_ITEM));
