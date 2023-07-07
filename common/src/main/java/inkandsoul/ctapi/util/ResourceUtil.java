@@ -55,6 +55,13 @@ public class ResourceUtil {
         return blockModel;
     }
 
+    public static String generateModel(ResourceLocation parent){
+        JsonObjectBuilder builder = new JsonObjectBuilder();
+        builder.add("parent", parent.toString());
+
+        return builder.get().getAsJsonObject().toString();
+    }
+
     public static String generateModel(ResourceLocation parent, JsonObject textures){
         JsonObjectBuilder builder = new JsonObjectBuilder();
         builder.add("parent", parent.toString());

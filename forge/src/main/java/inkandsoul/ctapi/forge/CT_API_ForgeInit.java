@@ -7,6 +7,7 @@ import inkandsoul.ctapi.item.BaseItem;
 import inkandsoul.ctapi.registries.ModRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -24,7 +25,6 @@ public class CT_API_ForgeInit {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         // bus.addListener(CT_API_ForgeInit::commonInit);
         EventBuses.registerModEventBus(CT_API.MOD_ID, bus);
-
     }
 
     @SubscribeEvent
