@@ -36,13 +36,13 @@ public class RecipeLoader {
         map.putAll(RECIPES);
     }
 
-    /* new ShapedRecipeBuilder(RecipeCategory.MISC, Items.AIR, 64)
-			.define('X', Items.DIRT)
-			.pattern(" X")
-			.pattern("  ")
-				.save(i->{
-						RecipeLoader.add(i.getId(), i.serializeRecipe());
-					},
-					LOCATION.of("test")
-				); */
+    // new ShapedRecipeBuilder(RecipeCategory.MISC, Items.AIR, 64)
+    // 		.define('X', Items.DIRT)
+    // 		.pattern(" X")
+    // 		.pattern("  ")
+    // 			.save(i->{
+    // 					RecipeLoader.add(i.getId(), i.serializeRecipe());
+    // 				},
+    // 				LOCATION.of("test")
+    // 			);
 }

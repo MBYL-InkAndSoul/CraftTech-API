@@ -10,8 +10,6 @@
     "block.BlockMixin",
     "data.DataPackHooks",
     "data.RecipeAddHooks",
-    "data.TagLoaderMixin",
-    "data.TagManagerMixin"
   ],
   "client": [
     "accessors.ItemRendererAccessors",

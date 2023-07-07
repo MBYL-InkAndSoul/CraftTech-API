@@ -1,5 +1,6 @@
 package inkandsoul.ctapi.mixin.data;
 
+import inkandsoul.ctapi.event.tag.TagLoader;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
@@ -29,9 +30,8 @@ public class DataPackHooks {
                                            CallbackInfo ci,
                                            ResourceKey<? extends Registry<T>> resourceKey,
                                            Map<TagKey<T>, List<Holder<T>>> map){
-        var key = loadResult.key();
-        if (key == Registries.ITEM) {
+        // var key = loadResult.key();
+        TagLoader.EVENT.invoker().onTagLoad(loadResult, map);
 
-        }
     }
 }
