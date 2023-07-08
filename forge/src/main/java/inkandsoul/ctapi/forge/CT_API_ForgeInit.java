@@ -5,6 +5,8 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import inkandsoul.ctapi.CT_API;
 import inkandsoul.ctapi.item.BaseItem;
 import inkandsoul.ctapi.registries.ModRegistries;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
@@ -33,6 +35,7 @@ public class CT_API_ForgeInit {
         EventBuses.registerModEventBus(CT_API.MOD_ID, bus);
 
         ModRegistries.init();
+        Registry.register(BuiltInRegistries.ITEM, CT_API.LOCATION.of("test"), new Item(new Item.Properties()));
     }
 
     public void regInit(final RegisterEvent event){
