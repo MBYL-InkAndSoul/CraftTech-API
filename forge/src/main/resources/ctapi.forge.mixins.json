@@ -4,6 +4,7 @@
   "package": "inkandsoul.ctapi.mixin.forge",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ForgeYourSelf"
   ],
   "client": [
     "ModelLoaderHooks"
