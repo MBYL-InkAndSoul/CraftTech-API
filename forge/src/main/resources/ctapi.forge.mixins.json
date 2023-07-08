@@ -4,6 +4,7 @@
   "package": "inkandsoul.ctapi.mixin.forge",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "FYS_NamespacedWrapperMixin",
     "ForgeYourSelf"
   ],
   "client": [

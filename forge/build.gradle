@@ -7,8 +7,11 @@ architectury {
     forge()
 }
 
-loom.forge {
-    mixinConfigs("ctapi.mixins.json", "ctapi.forge.mixins.json")
+loom {
+    accessWidenerPath = file("src/main/resources/ctapi.accesswidener")
+    forge {
+        mixinConfigs("ctapi.mixins.json", "ctapi.forge.mixins.json")
+    }
 }
 
 configurations {
