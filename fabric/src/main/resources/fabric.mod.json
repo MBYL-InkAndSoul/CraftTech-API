@@ -21,8 +21,8 @@
     ]
   },
   "mixins": [
-    "ctapi.mixins.json",
-    "ctapi-common.mixins.json"
+    "ctapi.fabric.mixins.json",
+    "ctapi.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.21",
