@@ -28,6 +28,8 @@ dependencies {
     shadowCommon(project(path: ":ct-api-common", configuration: "transformProductionFabric")) { transitive false }
 }
 
+project.archivesBaseName += '-'+loom.getPlatform().get().name()+'-'
+
 processResources {
     inputs.property "version", project.version
 
