@@ -3,11 +3,6 @@ package inkandsoul.ctapi.forge;
 import dev.architectury.platform.forge.EventBuses;
 import inkandsoul.ctapi.CT_API;
 import inkandsoul.ctapi.registries.ModRegistries;
-import inkandsoul.ctapi.registry.VanillaRegistryLock;
-import inkandsoul.fys.ForgeYourself;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -27,7 +22,6 @@ public class CT_API_ForgeInit {
         bus.addListener(this::warn);
 
         EventBuses.registerModEventBus(CT_API.MOD_ID, bus);
-
         ModRegistries.init();
     }
 
