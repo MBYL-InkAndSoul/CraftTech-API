@@ -2,7 +2,7 @@ package inkandsoul.ctapi.forge;
 
 import dev.architectury.platform.forge.EventBuses;
 import inkandsoul.ctapi.CT_API;
-import inkandsoul.ctapi.registries.ModRegistries;
+import inkandsoul.ctapi.main.common.both.registries.ModRegistries;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;

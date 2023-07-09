@@ -2,8 +2,8 @@ package inkandsoul.ctapi.client.fabric;
 
 import org.jetbrains.annotations.Nullable;
 
-import inkandsoul.ctapi.client.data.model.ModelLoader;
-import inkandsoul.ctapi.util.ResourceUtil;
+import inkandsoul.ctapi.main.common.client.data.model.ModelLoader;
+import inkandsoul.ctapi.main.common.both.util.ResourceUtil;
 import net.fabricmc.fabric.api.client.model.ModelProviderContext;
 import net.fabricmc.fabric.api.client.model.ModelResourceProvider;
 import net.fabricmc.fabric.api.client.model.ModelVariantProvider;

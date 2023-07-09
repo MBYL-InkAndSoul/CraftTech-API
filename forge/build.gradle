@@ -8,7 +8,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/ctapi.accesswidener")
+    accessWidenerPath = file("src/main/resources/ctapi.forge.accesswidener")
     forge {
         mixinConfigs("ctapi.mixins.json", "ctapi.forge.mixins.json")
     }

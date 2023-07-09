@@ -1,16 +1,12 @@
 package inkandsoul.ctapi.client.forge;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import inkandsoul.ctapi.CT_API;
-import inkandsoul.ctapi.client.renderer.ItemRenderEvent;
-import inkandsoul.ctapi.item.ModelItem;
+import inkandsoul.ctapi.main.common.client.renderer.ItemRenderEvent;
+import inkandsoul.ctapi.main.common.both.item.ModelItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ModelEvent;
@@ -18,7 +14,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.GameData;
 
 import java.util.Objects;
 

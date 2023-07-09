@@ -14,10 +14,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "inkandsoul.ctapi.fabric.CT_API_FabricInit"
+      "inkandsoul.ctapi.CT_API_FabricInit"
     ],
     "client": [
-      "inkandsoul.ctapi.client.fabric.CT_API_FabricClientInit"
+      "inkandsoul.ctapi.CT_API_ClientFabricInit"
     ]
   },
   "mixins": [

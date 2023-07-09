@@ -1,10 +1,10 @@
 package inkandsoul.ctapi;
 
 import dev.architectury.registry.registries.RegistrySupplier;
-import inkandsoul.ctapi.item.ModelItem;
-import inkandsoul.ctapi.registries.ModMachines;
-import inkandsoul.ctapi.registries.ModRegistries;
-import inkandsoul.ctapi.util.ResourceUtil;
+import inkandsoul.ctapi.main.common.both.item.ModelItem;
+import inkandsoul.ctapi.main.common.both.registries.ModMachines;
+import inkandsoul.ctapi.main.common.both.registries.ModRegistries;
+import inkandsoul.ctapi.main.common.both.util.ResourceUtil;
 import net.minecraft.world.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

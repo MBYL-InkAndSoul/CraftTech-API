@@ -1,7 +1,7 @@
 package inkandsoul.ctapi.client.forge;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import inkandsoul.ctapi.client.renderer.ItemRenderEvent;
+import inkandsoul.ctapi.main.common.client.renderer.ItemRenderEvent;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
