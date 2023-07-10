@@ -1,6 +1,4 @@
-package inkandsoul.ctapi.main.common.both.registries;
-
-import net.minecraft.world.level.block.entity.BlockEntityType;
+package inkandsoul.ctapi.main.common.both.registry;
 
 public class ModMachines {
 

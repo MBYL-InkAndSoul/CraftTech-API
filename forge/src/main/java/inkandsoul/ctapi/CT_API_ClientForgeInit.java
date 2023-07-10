@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.client.forge;
+package inkandsoul.ctapi;
 
 import inkandsoul.ctapi.CT_API;
 import inkandsoul.ctapi.main.common.client.renderer.ItemRenderEvent;
@@ -18,7 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = CT_API.MOD_ID, value = {Dist.CLIENT})
-public class CT_API_ForgeClientInit {
+public class CT_API_ClientForgeInit {
     @SubscribeEvent
     public void init(final FMLClientSetupEvent event){
         ItemRenderEvent.EVENT.register((stack, mode, pose, mbs, light, overlay) -> {

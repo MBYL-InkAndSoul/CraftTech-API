@@ -1,19 +1,19 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "inkandsoul.ctapi.mixin",
+  "package": "inkandsoul.ctapi.mixin.common",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "common.both.WashableHooks",
-    "common.both.accessors.AbstractCauldronBlockAccessor",
-    "common.both.accessors.BlockItemAccessor",
-    "common.both.block.BlockMixin",
-    "common.both.data.DataPackHooks",
-    "common.both.data.RecipeAddHooks"
+    "both.WashableHooks",
+    "both.accessors.AbstractCauldronBlockAccessor",
+    "both.accessors.BlockItemAccessor",
+    "both.block.BlockMixin",
+    "both.data.DataPackHooks",
+    "both.data.RecipeAddHooks"
   ],
   "client": [
-    "common.both.accessors.ItemRendererAccessors",
-    "common.both.accessors.ModelBakeryAccessor"
+    "both.accessors.ItemRendererAccessors",
+    "both.accessors.ModelBakeryAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

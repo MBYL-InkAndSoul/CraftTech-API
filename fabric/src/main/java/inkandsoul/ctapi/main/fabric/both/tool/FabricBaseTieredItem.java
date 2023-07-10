@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.main.tool.fabric;
+package inkandsoul.ctapi.main.fabric.both.tool;
 
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.ItemStack;

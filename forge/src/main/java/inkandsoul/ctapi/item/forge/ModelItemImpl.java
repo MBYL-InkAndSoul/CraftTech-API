@@ -1,6 +1,6 @@
 package inkandsoul.ctapi.item.forge;
 
-import inkandsoul.ctapi.client.forge.SpecialItemRenderer;
+import inkandsoul.ctapi.main.forge.client.SpecialItemRenderer;
 import inkandsoul.ctapi.main.common.both.item.ModelItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;

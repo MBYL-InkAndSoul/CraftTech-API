@@ -7,7 +7,7 @@
 
   ],
   "client": [
-    "ModelLoaderHooks"
+    "client.ModelLoaderHooks"
   ],
   "injectors": {
     "defaultRequire": 1

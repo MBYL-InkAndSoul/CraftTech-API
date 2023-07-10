@@ -1,9 +1,8 @@
-package inkandsoul.ctapi.forge;
+package inkandsoul.ctapi;
 
 import dev.architectury.platform.forge.EventBuses;
-import inkandsoul.ctapi.CT_API;
-import inkandsoul.ctapi.main.common.both.registries.ModRegistries;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
@@ -13,29 +12,29 @@ import net.minecraftforge.registries.RegisterEvent;
 @Mod(CT_API.MOD_ID)
 public class CT_API_ForgeInit {
 
+
     public CT_API_ForgeInit() {
 		// Submit our event bus to let architectury register our content on the right time
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        bus.addListener(this::init);
-        bus.addListener(this::regInit);
-        bus.addListener(this::warn);
-
         EventBuses.registerModEventBus(CT_API.MOD_ID, bus);
-        ModRegistries.init();
+        bus.register(this);
     }
 
+    @SubscribeEvent
     public void regInit(final RegisterEvent event){
-        CT_API.init();
+
     }
 
+    @SubscribeEvent
     public void init(final FMLCommonSetupEvent event) {
-
+        CT_API.LOGGER.warn("[CT-API] Forge common setup!");
     }
 
+    @SubscribeEvent
     public void warn(final FMLLoadCompleteEvent event) {
-        CT_API.LOGGER.warn("[CT-API]Forge support is not in plan!");
-        CT_API.LOGGER.warn("[CT-API]Maybe will catch a lot of problems!");
+        CT_API.LOGGER.warn("[CT-API] Forge support is not in plan!");
+        CT_API.LOGGER.warn("[CT-API] Maybe will catch a lot of problems!");
     }
 
 }

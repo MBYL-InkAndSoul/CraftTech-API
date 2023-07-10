@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.client.item.fabric;
+package inkandsoul.ctapi.main.fabric.client.item;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;

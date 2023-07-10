@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.client.forge;
+package inkandsoul.ctapi.main.forge.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import inkandsoul.ctapi.main.common.client.renderer.ItemRenderEvent;

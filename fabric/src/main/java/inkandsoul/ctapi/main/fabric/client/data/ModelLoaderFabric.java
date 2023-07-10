@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.client.fabric;
+package inkandsoul.ctapi.main.fabric.client.data;
 
 import org.jetbrains.annotations.Nullable;
 

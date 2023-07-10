@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.mixin.forge;
+package inkandsoul.ctapi.mixin.forge.client;
 
 import inkandsoul.ctapi.main.common.client.data.model.ModelLoader;
 import inkandsoul.ctapi.main.common.both.util.ResourceUtil;

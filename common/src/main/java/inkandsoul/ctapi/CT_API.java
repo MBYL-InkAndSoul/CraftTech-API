@@ -1,10 +1,10 @@
 package inkandsoul.ctapi;
 
-import dev.architectury.registry.registries.RegistrySupplier;
 import inkandsoul.ctapi.main.common.both.item.ModelItem;
-import inkandsoul.ctapi.main.common.both.registries.ModMachines;
-import inkandsoul.ctapi.main.common.both.registries.ModRegistries;
+import inkandsoul.ctapi.expect.registry.CommonRegistry;
+import inkandsoul.ctapi.main.common.both.registry.ModMachines;
 import inkandsoul.ctapi.main.common.both.util.ResourceUtil;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,12 +14,14 @@ public class CT_API {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static final ResourceUtil.Location LOC = new ResourceUtil.Location(MOD_ID);
 
+	public static final CommonRegistry REGISTRY = new CommonRegistry(LOC);
+
 	public static void init() {
 		ModMachines.init();
 	}
 
-	public static final Item MODEL_ITEM = ModelItem.of();
-	public static final RegistrySupplier<Item> MODEL = ModRegistries.ITEMS.register("model_item", () -> MODEL_ITEM);
+	public static final Item MODEL_ITEM = REGISTRY.register(Registries.ITEM, LOC.of("model"), ModelItem.of());
+//	public static final RegistrySupplier<Item> MODEL = ModRegistries.ITEMS.register("model_item", () -> MODEL_ITEM);
 
 	// public static final RegistrySupplier<Item> MODEL = ModRegistries.ITEMS.register("model_item", () -> MODEL_ITEM);
 	// public static final CreativeModeTab ITEM_TAB = CreativeTabRegistry.create(builder -> {
