@@ -1,6 +1,7 @@
-package inkandsoul.ctapi.main.common.both.item;
+package inkandsoul.ctapi.expect.item;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
+import inkandsoul.ctapi.main.common.both.util.ItemUtil;
 import net.minecraft.world.item.Item;
 
 // TODO: Complete this rendering.
@@ -10,11 +11,11 @@ import net.minecraft.world.item.Item;
 public abstract class ModelItem extends Item {
 
     protected ModelItem() {
-        super(new Properties());
+        super(ItemUtil.VOID_PROPERTIES);
     }
 
     @ExpectPlatform
     public static ModelItem of(){
-        throw new AssertionError("");
+        throw new AssertionError();
     }
 }

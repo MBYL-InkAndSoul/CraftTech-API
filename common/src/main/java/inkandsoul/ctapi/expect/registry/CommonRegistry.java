@@ -1,30 +1,29 @@
 package inkandsoul.ctapi.expect.registry;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
-import inkandsoul.ctapi.main.common.both.util.ResourceUtil;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class CommonRegistry {
+public class CommonRegistry<T> {
 
-    private final ResourceUtil.Location loc;
+    public static final Logger LOG = LoggerFactory.getLogger(CommonRegistry.class);
 
-    public CommonRegistry(ResourceUtil.Location location) {
-        this.loc = location;
+    private final ResourceKey<Registry<T>> rk;
+
+    public CommonRegistry(ResourceKey<Registry<T>> location) {
+        this.rk = location;
     }
 
     @ExpectPlatform
-    public static <T> T registerImpl(ResourceKey<Registry<T>> key, ResourceLocation id, T obj) {
+    public static <T> T registerStatic(ResourceKey<Registry<T>> key, ResourceLocation id, T obj) {
         throw new AssertionError();
     }
 
-    public <T> T register(ResourceKey<Registry<T>> key, String id, T obj) {
-        return register(key, loc.of(id), obj);
-    }
-
-    public <T> T register(ResourceKey<Registry<T>> key, ResourceLocation id, T obj) {
-        return CommonRegistry.registerImpl(key, id, obj);
+    public T register(ResourceLocation id, T obj) {
+        return CommonRegistry.registerStatic(rk, id, obj);
     }
 
 }

@@ -1,6 +1,6 @@
 package inkandsoul.ctapi;
 
-import inkandsoul.ctapi.main.common.both.item.ModelItem;
+import inkandsoul.ctapi.expect.item.ModelItem;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;

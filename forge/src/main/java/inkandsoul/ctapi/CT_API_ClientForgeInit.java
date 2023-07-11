@@ -1,8 +1,7 @@
 package inkandsoul.ctapi;
 
-import inkandsoul.ctapi.CT_API;
 import inkandsoul.ctapi.main.common.client.renderer.ItemRenderEvent;
-import inkandsoul.ctapi.main.common.both.item.ModelItem;
+import inkandsoul.ctapi.expect.item.ModelItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
