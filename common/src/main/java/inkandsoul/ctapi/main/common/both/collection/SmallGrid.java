@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.main.common.both.util;
+package inkandsoul.ctapi.main.common.both.collection;
 
 // import java.util.ArrayList;
 // import java.util.LinkedHashMap;

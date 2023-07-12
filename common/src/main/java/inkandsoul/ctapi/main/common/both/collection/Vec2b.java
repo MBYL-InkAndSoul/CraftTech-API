@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.main.common.both.util;
+package inkandsoul.ctapi.main.common.both.collection;
 
 public class Vec2b {
     public static final Vec2b MAX = new Vec2b(Byte.MAX_VALUE, Byte.MAX_VALUE);

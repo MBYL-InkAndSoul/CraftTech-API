@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.main.common.both.util.json;
+package inkandsoul.ctapi.main.common.both.json;
 
 import com.google.gson.JsonElement;
 

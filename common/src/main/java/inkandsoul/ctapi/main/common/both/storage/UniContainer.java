@@ -1,9 +1,13 @@
-package inkandsoul.ctapi.main.common.both.machine;
+package inkandsoul.ctapi.main.common.both.storage;
 
 import dev.architectury.fluid.FluidStack;
 import net.minecraft.world.Container;
 
-public interface MachineContainer extends Container {
+public interface UniContainer extends Container {
+
+//    static UniContainer of(int[] size) {
+//
+//    }
 
     int getTankSize();
 
@@ -22,8 +26,7 @@ public interface MachineContainer extends Container {
 
     FluidStack removeFluid(int i, int a);
 
-    FluidStack removeFluidNoUpdata(int i);
+    FluidStack removeFluidNoUpdate(int i);
 
     void setFluid(int i, FluidStack stack);
-
 }

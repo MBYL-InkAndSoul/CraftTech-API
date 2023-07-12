@@ -1,13 +1,17 @@
 package inkandsoul.ctapi.expect.registry;
 
-import inkandsoul.ctapi.main.common.both.util.ResourceUtil;
+import inkandsoul.ctapi.main.common.both.util.LocationDefine;
 import net.minecraft.resources.ResourceLocation;
 
-public class ModRegistry<T> {
+/**
+ * More clearly register method.
+ * @param <T> Type
+ */
+public class NamespaceRegistry<T> {
     private final CommonRegistry<T> registry;
-    private final ResourceUtil.Location loc;
+    private final LocationDefine loc;
 
-    public ModRegistry(CommonRegistry<T> registry, ResourceUtil.Location loc) {
+    public NamespaceRegistry(CommonRegistry<T> registry, LocationDefine loc) {
         this.registry = registry;
         this.loc = loc;
     }

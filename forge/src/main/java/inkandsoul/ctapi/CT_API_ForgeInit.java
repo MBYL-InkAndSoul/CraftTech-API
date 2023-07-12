@@ -1,12 +1,14 @@
 package inkandsoul.ctapi;
 
 import dev.architectury.platform.forge.EventBuses;
+import inkandsoul.ctapi.expect.registry.forge.CommonRegistryImpl;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.NewRegistryEvent;
 import net.minecraftforge.registries.RegisterEvent;
 
 @Mod(CT_API.MOD_ID)
@@ -22,8 +24,13 @@ public class CT_API_ForgeInit {
     }
 
     @SubscribeEvent
-    public void regInit(final RegisterEvent event){
+    public void newReg(final NewRegistryEvent event){
+        CommonRegistryImpl.onNewRegistry(event);
+    }
 
+    @SubscribeEvent
+    public void regInit(final RegisterEvent event){
+        CommonRegistryImpl.onRegister(event);
     }
 
     @SubscribeEvent

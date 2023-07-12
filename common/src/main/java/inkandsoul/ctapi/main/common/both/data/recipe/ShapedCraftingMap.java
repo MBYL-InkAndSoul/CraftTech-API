@@ -1,9 +1,9 @@
 package inkandsoul.ctapi.main.common.both.data.recipe;
 
 import com.google.gson.JsonObject;
-import inkandsoul.ctapi.main.common.both.util.SmallGrid;
-import inkandsoul.ctapi.main.common.both.util.json.JsonArrayBuilder;
-import inkandsoul.ctapi.main.common.both.util.json.JsonObjectBuilder;
+import inkandsoul.ctapi.main.common.both.collection.SmallGrid;
+import inkandsoul.ctapi.main.common.both.json.JsonArrayBuilder;
+import inkandsoul.ctapi.main.common.both.json.JsonObjectBuilder;
 import net.minecraft.resources.ResourceLocation;
 
 /**

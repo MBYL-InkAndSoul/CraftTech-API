@@ -4,42 +4,27 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import inkandsoul.ctapi.CT_API;
-import inkandsoul.ctapi.main.common.both.util.json.JsonObjectBuilder;
-import inkandsoul.ctapi.main.common.both.util.model.BlockModels;
-import inkandsoul.ctapi.main.common.both.util.model.ItemModels;
+import inkandsoul.ctapi.main.common.both.json.JsonObjectBuilder;
+import inkandsoul.ctapi.main.common.both.data.model.BlockModels;
+import inkandsoul.ctapi.main.common.both.data.model.ItemModels;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 
 public class ResourceUtil {
-    public static class Location{
-
-        public final String MOD_ID;
-
+    /**
+     * @deprecated Replace by {@link LocationDefine}
+     */
+    @Deprecated
+    public static class Location extends LocationDefine {
         public Location(String MOD_ID) {
-            this.MOD_ID = MOD_ID;
-        }
-
-        public ResourceLocation of(String id){
-            return new ResourceLocation(MOD_ID, id);
-        }
-
-        public ModelResourceLocation ofModel(String id, String v){
-            return new ModelResourceLocation(MOD_ID, id, v);
-        }
-
-        /**
-         * TODO: Forge Platform!
-         */
-        public ResourceLocation ofTag(String id){
-            return new ResourceLocation(MOD_ID, id);
+            super(MOD_ID);
         }
     }
 
     public static ResourceLocation of(String id){
         return new ResourceLocation(CT_API.MOD_ID, id);
     }
-
 
     public static ResourceLocation ofTag(String id){
         return new ResourceLocation(CT_API.MOD_ID, id);

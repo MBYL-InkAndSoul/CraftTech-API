@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.main.common.both.event.item;
+package inkandsoul.ctapi.main.common.both.item.event;
 
 import dev.architectury.event.Event;
 import dev.architectury.event.EventFactory;
