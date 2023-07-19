@@ -15,6 +15,7 @@ public class CT_API {
 	public static final String MOD_ID = "ctapi";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static final LocationDefine LOC = new LocationDefine(MOD_ID);
+	//Registrate
 
 	public static void init() {
 		// 原木

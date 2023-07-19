@@ -5,10 +5,6 @@ import net.minecraft.world.Container;
 
 public interface UniContainer extends Container {
 
-//    static UniContainer of(int[] size) {
-//
-//    }
-
     int getTankSize();
 
     /**

@@ -1,10 +1,20 @@
+repositories {
+    maven { url = "https://mvn.devos.one/snapshots/" }
+}
+
 dependencies {
     // We depend on fabric loader here to use the fabric @Environment annotations and get the mixin dependencies
     // Do NOT use other classes from fabric loader
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     // Remove the next line if you don't want to depend on the API
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"
+
+    // Just used to cheep compiler...
+    compileOnly("net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}")
+    compileOnlyApi("com.tterrag.registrate_fabric:Registrate:${rootProject.fabric_registrate}")
+//    modImplementation(include("com.tterrag.registrate_fabric:Registrate:${rootProject.fabric_registrate}"))
 }
+
 
 architectury {
     common(rootProject.enabled_platforms.split(","))

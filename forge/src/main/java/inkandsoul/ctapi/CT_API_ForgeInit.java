@@ -1,7 +1,9 @@
 package inkandsoul.ctapi;
 
+import com.tterrag.registrate.Registrate;
 import dev.architectury.platform.forge.EventBuses;
 import inkandsoul.ctapi.expect.registry.forge.CommonRegistryImpl;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,8 +16,9 @@ import net.minecraftforge.registries.RegisterEvent;
 @Mod(CT_API.MOD_ID)
 public class CT_API_ForgeInit {
 
-
+    //public static final Registrate REGISTRATE = Registrate.create(CT_API.MOD_ID);
     public CT_API_ForgeInit() {
+        //REGISTRATE.item("test", Item::new);
 		// Submit our event bus to let architectury register our content on the right time
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 

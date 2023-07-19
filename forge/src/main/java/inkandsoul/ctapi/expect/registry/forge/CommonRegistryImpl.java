@@ -23,11 +23,12 @@ public class CommonRegistryImpl<T> extends CommonRegistry<T> {
     }
 
     public static void onRegister(final RegisterEvent event) {
-        CommonRegistry.REGISTRIES.forEach(reg->{
-            event.register(((ResourceKey)reg.getKey()), helper->{
-                reg.getHolders().forEach(i->helper.register(i.key, i.value));
-            });
-        });
+
+        CommonRegistry.REGISTRIES.forEach(
+            reg-> event.register(((ResourceKey)reg.getKey()),
+                helper-> reg.getHolders().forEach(i->helper.register(i.key, i.value))
+            )
+        );
     }
 
     public static <T> CommonRegistry<T> of(ResourceKey<Registry<T>> location) {

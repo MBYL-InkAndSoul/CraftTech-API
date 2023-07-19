@@ -1,5 +1,6 @@
 package inkandsoul.ctapi.expect.registry;
 
+import com.tterrag.registrate.Registrate;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import inkandsoul.ctapi.main.common.both.collection.Vec2;
 import net.minecraft.core.Registry;
