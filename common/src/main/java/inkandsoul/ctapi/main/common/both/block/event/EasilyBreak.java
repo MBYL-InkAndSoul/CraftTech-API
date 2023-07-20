@@ -1,9 +1,7 @@
-package inkandsoul.ctapi.main.common.both.block;
+package inkandsoul.ctapi.main.common.both.block.event;
 
 import dev.architectury.event.Event;
 import dev.architectury.event.EventFactory;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.level.block.AbstractGlassBlock;
 import net.minecraft.world.level.block.Block;
 
 /**
@@ -11,7 +9,7 @@ import net.minecraft.world.level.block.Block;
  */
 @FunctionalInterface
 public interface EasilyBreak {
-    Event<EasilyBreak> EVENT = EventFactory.createEventResult(EasilyBreak.class);
+    Event<EasilyBreak> EVENT = EventFactory.createEventResult(new EasilyBreak[0]);
 
     boolean applyHardcoreBreak(Block block);
 

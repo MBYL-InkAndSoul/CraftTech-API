@@ -33,8 +33,8 @@ public class SmallGrid<T> {
     
     private final NonNullList<T> map;
 
-    public SmallGrid(byte heigth, byte widgth, T defaultValue){
-        map = NonNullList.withSize(widgth*heigth, defaultValue);
+    public SmallGrid(byte height, byte width, T defaultValue){
+        map = NonNullList.withSize(width*height, defaultValue);
     }
 
     public void set(byte x, T thing){

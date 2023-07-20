@@ -10,8 +10,8 @@ dependencies {
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"
 
     // Just used to cheep compiler...
-    compileOnly("net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}")
-    compileOnlyApi("com.tterrag.registrate_fabric:Registrate:${rootProject.fabric_registrate}")
+//    compileOnly("net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}")
+//    compileOnlyApi("com.tterrag.registrate_fabric:Registrate:${rootProject.fabric_registrate}")
 //    modImplementation(include("com.tterrag.registrate_fabric:Registrate:${rootProject.fabric_registrate}"))
 }
 

@@ -7,9 +7,12 @@
     "both.WashableHooks",
     "both.accessors.AbstractCauldronBlockAccessor",
     "both.accessors.BlockItemAccessor",
+    "both.accessors.MappedRegistryAccessor",
+    "both.accessors.NamedAccessor",
+    "both.block.BlockBehaviourMixin",
     "both.block.BlockMixin",
-    "both.data.DataPackHooks",
-    "both.data.RecipeAddHooks"
+    "both.data.RecipeHooks",
+    "both.data.TagAddHooks"
   ],
   "client": [
     "both.accessors.ItemRendererAccessors",

@@ -11,21 +11,17 @@ import java.lang.reflect.InvocationTargetException;
 
 public class MachineBlock extends BaseBlock implements EntityBlock {
 
-    final Machine machine;
+    final MachineProperties machineProperties;
 
-    public MachineBlock(Properties properties, Machine machine) {
+    public MachineBlock(Properties properties, MachineProperties machineProperties) {
         super(properties);
-        this.machine = machine;
+        this.machineProperties = machineProperties;
     }
 
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        try {
-            return machine.entity.getConstructor(BlockPos.class, BlockState.class).newInstance(pos, state);
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-            throw new RuntimeException(e);
-        }
+        return machineProperties.entity.get(pos, state);
     }
 
 }
