@@ -1,11 +1,12 @@
 package inkandsoul.ctapi.main.common.both.storage;
 
 import dev.architectury.fluid.FluidStack;
+import inkandsoul.ctapi.main.common.both.storage.fluid.Tank;
 import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 
-public interface UniContainer extends Container {
-
-    int getTankSize();
+public interface UniContainer extends Container, Tank {
 
     /**
      * @deprecated
@@ -18,11 +19,4 @@ public interface UniContainer extends Container {
 
     boolean isContainerEmpty();
 
-    FluidStack getFluid(int i);
-
-    FluidStack removeFluid(int i, int a);
-
-    FluidStack removeFluidNoUpdate(int i);
-
-    void setFluid(int i, FluidStack stack);
 }

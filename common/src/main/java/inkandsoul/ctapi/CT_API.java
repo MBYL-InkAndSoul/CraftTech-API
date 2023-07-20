@@ -25,8 +25,8 @@ public class CT_API {
 
 	//@SuppressWarnings("unchecked")
 	public static void init() {
+		//ShapedRecipeBuilder.shaped(Rec)
 
-		//RecipeProvider
 		//RecipeLoader.add(new ResourceLocation("crafting_table"), GsonHelper.parse("""
 		//
 		//	"""));

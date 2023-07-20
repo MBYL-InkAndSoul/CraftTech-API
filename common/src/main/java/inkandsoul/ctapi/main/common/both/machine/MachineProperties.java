@@ -9,6 +9,9 @@ import java.util.function.Supplier;
 
 public class MachineProperties {
 
+    public static final MachineProperties EMPTY =
+        new MachineProperties(null, MachineBlockEntity.defaultTick, MachineBlockEntity::new);
+
     public final Supplier<UniContainer> defaultContainer;
     public final BlockEntityProvider entity;
     public final BlockEntityTicker<? extends BaseBlockEntity> entityTick;

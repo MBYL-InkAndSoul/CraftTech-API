@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.main.common.both.data.tag;
+package inkandsoul.ctapi.main.common.both.util;
 
 import inkandsoul.ctapi.mixin.common.both.accessors.NamedAccessor;
 import net.minecraft.core.Holder;

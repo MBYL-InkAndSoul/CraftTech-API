@@ -78,4 +78,5 @@ public class ResourceUtil {
                 new JsonObjectBuilder().add("all", all).get().getAsJsonObject());
     }
 
+    //public static JsonElement generateSimpleRecipe
 }

@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+@SuppressWarnings("unused")
 public class JsonArrayBuilder implements JsonBuilder {
 
     private final JsonArray array = new JsonArray();
