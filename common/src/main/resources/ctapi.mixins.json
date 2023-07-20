@@ -10,7 +10,6 @@
     "both.accessors.MappedRegistryAccessor",
     "both.accessors.NamedAccessor",
     "both.block.BlockBehaviourMixin",
-    "both.block.BlockMixin",
     "both.data.RecipeHooks",
     "both.data.TagAddHooks"
   ],

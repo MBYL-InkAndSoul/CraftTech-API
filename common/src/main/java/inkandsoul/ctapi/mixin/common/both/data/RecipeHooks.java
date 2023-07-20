@@ -16,10 +16,9 @@ import java.util.Map;
 @Mixin(RecipeManager.class)
 public class RecipeHooks {
 
-	//@SuppressWarnings({"unchecked", "rawtypes"})
 	@Inject(method = "apply(Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)V"
 		, at = @At("HEAD"))
-	protected void onReload(Map<ResourceLocation, JsonElement> map, ResourceManager resourceManager, ProfilerFiller profilerFiller, CallbackInfo ci) {
+	public void onReload(Map<ResourceLocation, JsonElement> map, ResourceManager resourceManager, ProfilerFiller profilerFiller, CallbackInfo ci) {
 		//RecipeLoader
 		RecipeLoader.onRecipesReload(map);
 		//RecipeReloadEvent.EVENT.invoker().reload((HashMap<RecipeType, ImmutableMap.Builder<ResourceLocation, Recipe<?>>>) map2);
