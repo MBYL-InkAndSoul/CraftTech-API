@@ -10,7 +10,6 @@ public final class BaseBlockTags {
     // Fragile
     public static final TagKey<Block> FRAGILE = create("fragile");
     public static final TagKey<Block> HARD = create("hard");
-    public static final TagKey<Block> DROP_SELF = create("drop_self");
     public static final TagKey<Block> AIRTIGHT = create("airtight");
 
     private BaseBlockTags(){}

@@ -26,8 +26,24 @@ public class BlockBehaviourMixin {
                                         CallbackInfoReturnable<Float> ci){
         var self = (Block)(Object)this;
         float f = ci.getReturnValueF();
-        ci.setReturnValue(
-            blockState.is(BaseBlockTags.DROP_SELF) || (!player.hasCorrectToolForDrops(blockState) && !blockState.is(BaseBlockTags.FRAGILE)) ? 0 : f);
+
+        if (blockState.is(BaseBlockTags.HARD) || !blockState.is(BaseBlockTags.FRAGILE) &&
+            (
+                (
+                    !player.hasCorrectToolForDrops(blockState)
+                )
+                ||
+                (
+                    // You can destroy grass by hand
+                    blockState.getBlock().defaultDestroyTime() > 0f &&
+                    player.getMainHandItem().isEmpty()
+                )
+            )
+        ) {
+            ci.setReturnValue(0f);
+        } else {
+            ci.setReturnValue(f);
+        }
     }
 
 
