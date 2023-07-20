@@ -1,11 +1,5 @@
 package inkandsoul.ctapi.main.common.both.collection;
 
-// import java.util.ArrayList;
-// import java.util.LinkedHashMap;
-// import java.util.List;
-// import java.util.Map;
-
-// import net.minecraft.Util;
 import net.minecraft.core.NonNullList;
 
 /**

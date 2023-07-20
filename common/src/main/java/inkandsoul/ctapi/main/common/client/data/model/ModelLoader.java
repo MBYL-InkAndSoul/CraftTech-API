@@ -21,22 +21,13 @@ public class ModelLoader {
 
     public static void add(ModelResourceLocation id, JsonElement model){
         BUILTIN_JSON_V_MODEL.put(id, model);
-        // if(ModValues.MODEL_DEBUG){
-        //     LOGGER.info("Registry model: {}", id);
-        // }
     }
 
     public static void add(ResourceLocation id, JsonElement model){
         BUILTIN_JSON_R_MODEL.put(id, model);
-        // if(ModValues.MODEL_DEBUG){
-        //     LOGGER.info("Registry model: {}", id);
-        // }
     }
 
     public static void addState(ResourceLocation id, JsonElement model){
         BLOCK_STATES.put(id, model);
-        // if(ModValues.MODEL_DEBUG){
-        //     LOGGER.info("Registry model: {}", id);
-        // }
     }
 }

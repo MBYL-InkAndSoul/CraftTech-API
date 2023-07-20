@@ -3,7 +3,6 @@ package inkandsoul.ctapi.main.common.both.registry;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 
-import java.util.Collection;
 import java.util.Map;
 
 public interface ISRegistry<ID, OBJ> {

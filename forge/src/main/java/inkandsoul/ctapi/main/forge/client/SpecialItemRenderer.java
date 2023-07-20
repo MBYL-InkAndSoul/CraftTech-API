@@ -8,6 +8,9 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
+
+import javax.annotation.ParametersAreNonnullByDefault;
 
 public class SpecialItemRenderer extends BlockEntityWithoutLevelRenderer {
 
@@ -15,6 +18,7 @@ public class SpecialItemRenderer extends BlockEntityWithoutLevelRenderer {
         super(arg, arg2);
     }
 
+    @ParametersAreNonnullByDefault
     @Override
     public void renderByItem(ItemStack stack, ItemDisplayContext arg2, PoseStack arg3, MultiBufferSource arg4, int i, int j) {
         ItemRenderEvent.EVENT.invoker().render(stack, arg2, arg3, arg4, i, j);

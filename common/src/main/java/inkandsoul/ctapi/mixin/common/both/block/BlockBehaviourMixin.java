@@ -28,11 +28,6 @@ public class BlockBehaviourMixin {
         float f = ci.getReturnValueF();
         ci.setReturnValue(
             blockState.is(BaseBlockTags.DROP_SELF) || (!player.hasCorrectToolForDrops(blockState) && !blockState.is(BaseBlockTags.FRAGILE)) ? 0 : f);
-        //if(!EasilyBreak.EVENT.invoker().applyHardcoreBreak(self)){
-        //    ci.setReturnValue(f == 30f ? 0 : f);
-        //}else{
-        //    ci.setReturnValue(f);
-        //}
     }
 
 

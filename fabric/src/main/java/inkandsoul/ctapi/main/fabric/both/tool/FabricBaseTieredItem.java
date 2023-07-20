@@ -3,6 +3,9 @@ package inkandsoul.ctapi.main.fabric.both.tool;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
+import org.jetbrains.annotations.NotNull;
+
+import javax.annotation.ParametersAreNonnullByDefault;
 
 public class FabricBaseTieredItem extends FabricBaseToolItem {
 
@@ -22,7 +25,7 @@ public class FabricBaseTieredItem extends FabricBaseToolItem {
         return this.tier.getEnchantmentValue();
     }
 
-    @Override
+    @ParametersAreNonnullByDefault
     public boolean isValidRepairItem(ItemStack arg, ItemStack arg2) {
         return this.tier.getRepairIngredient().test(arg2) || super.isValidRepairItem(arg, arg2);
     }

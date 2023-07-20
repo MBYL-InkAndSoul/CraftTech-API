@@ -25,7 +25,7 @@ public class CT_API_ClientForgeInit {
                 var mc = Minecraft.getInstance();
                 var nbt = stack.getOrCreateTag();
 
-                ItemStack stack2 = null;
+                ItemStack stack2;
                 try {
                     stack2 = new ItemStack(
                         Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(

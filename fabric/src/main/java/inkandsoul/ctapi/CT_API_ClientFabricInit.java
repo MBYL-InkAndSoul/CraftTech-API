@@ -2,10 +2,8 @@ package inkandsoul.ctapi;
 
 import dev.architectury.event.events.client.ClientTooltipEvent;
 import inkandsoul.ctapi.main.fabric.client.data.ModelLoaderFabric;
-import inkandsoul.ctapi.main.fabric.client.item.ModelItemRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;

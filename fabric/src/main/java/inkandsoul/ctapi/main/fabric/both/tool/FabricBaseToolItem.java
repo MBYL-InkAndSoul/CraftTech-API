@@ -19,18 +19,5 @@ public class FabricBaseToolItem extends BaseItem {
             return ItemStack.EMPTY;
         }
     }
-
-    // @Override
-    // public ItemStack getCraftingRemainingItem(ItemStack itemStack) {
-    //     var stack = itemStack;
-    //     itemStack.setDamageValue(itemStack.getDamageValue()+1);
-
-    //     return stack;
-    // }
-
-    // @Override
-    // public boolean hasCraftingRemainingItem(ItemStack stack) {
-    //     return (stack.getDamageValue() < stack.getMaxDamage());
-    // }
     
 }

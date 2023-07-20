@@ -3,7 +3,6 @@ package inkandsoul.ctapi.main.common.both.data.tag;
 import inkandsoul.ctapi.mixin.common.both.accessors.NamedAccessor;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import org.jetbrains.annotations.NotNull;
 

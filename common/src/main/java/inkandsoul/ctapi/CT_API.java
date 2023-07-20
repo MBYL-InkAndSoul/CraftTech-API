@@ -1,18 +1,8 @@
 package inkandsoul.ctapi;
 
-import inkandsoul.ctapi.main.common.both.block.BaseBlockTags;
-import inkandsoul.ctapi.main.common.both.data.recipe.RecipeLoader;
-import inkandsoul.ctapi.main.common.both.data.tag.TagUtil;
-import inkandsoul.ctapi.main.common.both.data.tag.TagsReloadEvent;
 import inkandsoul.ctapi.main.common.both.registry.SRegistries;
 import inkandsoul.ctapi.main.common.both.registry.SResourceKeys;
 import inkandsoul.ctapi.main.common.both.util.LocationDefine;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.GsonHelper;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,7 +23,7 @@ public class CT_API {
 		sRegInit = true;
 	}
 
-	@SuppressWarnings("unchecked")
+	//@SuppressWarnings("unchecked")
 	public static void init() {
 
 		//RecipeProvider
