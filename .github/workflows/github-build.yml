@@ -20,8 +20,18 @@ jobs:
           CI: true
         id: gradle
         run: .\gradlew build
-      - name: Upload build
+      - name: Upload common build
         uses: actions/upload-artifact@v3
         with:
-          name: build-libs
+          name: common
           path: build/libs/
+      - name: Upload fabric build
+        uses: actions/upload-artifact@v3
+        with:
+          name: fabric
+          path: fabric/build/libs/
+      - name: Upload forge build
+        uses: actions/upload-artifact@v3
+        with:
+          name: forge
+          path: forge/build/libs/
