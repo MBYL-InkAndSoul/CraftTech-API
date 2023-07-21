@@ -9,8 +9,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.List;
 import java.util.Map;
 
-import static com.ibm.icu.text.PluralRules.Operand.v;
-
 public class RecipeFactory {
     private List<Recipe> recipes = List.of();
 

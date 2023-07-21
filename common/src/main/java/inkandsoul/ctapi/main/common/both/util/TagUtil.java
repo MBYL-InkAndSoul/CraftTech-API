@@ -1,8 +1,12 @@
 package inkandsoul.ctapi.main.common.both.util;
 
+import dev.architectury.injectables.annotations.ExpectPlatform;
+import inkandsoul.ctapi.expect.util.TagMaker;
 import inkandsoul.ctapi.mixin.common.both.accessors.NamedAccessor;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.TagKey;
 import org.jetbrains.annotations.NotNull;
 
@@ -10,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked", "unused"})
 public class TagUtil {
 
     public static <T> void add(Registry<T> reg, TagKey<T> tag, T[] things) {
@@ -78,4 +82,7 @@ public class TagUtil {
         ((NamedAccessor<T>) reg.getOrCreateTag(tag)).bindTags(list);
     }
 
+    public static <T> TagKey<T> makeTag(ResourceKey<Registry<T>> key, String form, String material) {
+        return TagMaker.makeTag(key, form, material);
+    }
 }

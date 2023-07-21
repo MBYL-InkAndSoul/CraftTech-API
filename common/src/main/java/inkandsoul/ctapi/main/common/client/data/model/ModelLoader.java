@@ -18,7 +18,6 @@ public class ModelLoader {
     public static final Map<ModelResourceLocation, JsonElement> BUILTIN_JSON_V_MODEL = new LinkedHashMap<>();
     public static final Map<ResourceLocation, JsonElement> BUILTIN_JSON_R_MODEL = new LinkedHashMap<>();
     public static final Map<ResourceLocation, JsonElement> BLOCK_STATES = new LinkedHashMap<>();
-
     public static void add(ModelResourceLocation id, JsonElement model){
         BUILTIN_JSON_V_MODEL.put(id, model);
     }

@@ -1,4 +1,4 @@
-package inkandsoul.ctapi.main.common.both.data.model;
+package inkandsoul.ctapi.main.common.client.data.model;
 
 import net.minecraft.resources.ResourceLocation;
 
