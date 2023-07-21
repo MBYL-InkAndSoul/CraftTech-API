@@ -15,6 +15,6 @@ public final class BaseBlockTags {
     private BaseBlockTags(){}
 
     private static TagKey<Block> create(String string) {
-        return TagKey.create(Registries.BLOCK, CT_API.LOC.of(string));
+        return TagKey.create(Registries.BLOCK, CT_API.LOC.ofId(string));
     }
 }

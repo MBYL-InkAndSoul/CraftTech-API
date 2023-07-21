@@ -12,15 +12,6 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 
 public class ResourceUtil {
-    /**
-     * @deprecated Replace by {@link LocationDefine}
-     */
-    @Deprecated
-    public static class Location extends LocationDefine {
-        public Location(String MOD_ID) {
-            super(MOD_ID);
-        }
-    }
 
     public static ResourceLocation of(String id){
         return new ResourceLocation(CT_API.MOD_ID, id);
@@ -31,7 +22,7 @@ public class ResourceUtil {
     }
 
     public static ModelResourceLocation ofModel(String id, String variant){
-        return new ModelResourceLocation(CT_API.LOC.of(id), variant);
+        return new ModelResourceLocation(CT_API.LOC.ofId(id), variant);
     }
 
     public static BlockModel loadJsonModelFromString(ResourceLocation id, String model){

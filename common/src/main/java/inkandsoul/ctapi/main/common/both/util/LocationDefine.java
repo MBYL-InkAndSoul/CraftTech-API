@@ -3,6 +3,7 @@ package inkandsoul.ctapi.main.common.both.util;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 
+@Deprecated
 public class LocationDefine {
 
     public final String MOD_ID;
