@@ -4,13 +4,9 @@ import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.Item;
 
-public interface ToolItem {
+public class ToolItem {
     @ExpectPlatform
-    static ToolItem of(MutableComponent name, Item.Properties properties) {
+    static IToolItem of(MutableComponent name, Item.Properties properties) {
         throw new AssertionError();
-    }
-
-    default int damageStep(){
-        return 1;
     }
 }

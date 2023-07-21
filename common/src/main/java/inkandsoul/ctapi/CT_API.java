@@ -1,9 +1,7 @@
 package inkandsoul.ctapi;
 
-import com.tterrag.registrate.Registrate;
 import inkandsoul.ctapi.main.common.both.registry.SRegistries;
 import inkandsoul.ctapi.main.common.both.registry.SResourceKeys;
-import inkandsoul.ctapi.main.common.both.util.LocationDefine;
 import inkandsoul.ctapi.main.common.both.util.Registration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
