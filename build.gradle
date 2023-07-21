@@ -38,6 +38,8 @@ subprojects {
 
 allprojects {
     apply plugin: "java"
+    java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
     apply plugin: "architectury-plugin"
     apply plugin: "maven-publish"
 
