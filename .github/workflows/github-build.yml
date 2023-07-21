@@ -1,6 +1,14 @@
 name: CI
 run-name: Build
-on: [push]
+on:
+  push:
+    branches:
+      - Build
+    paths-ignore:
+      - '.github'
+      - '.idea'
+  schedule:
+    - cron: '0 24 * * 7'
 
 jobs:
   gradle:
@@ -20,11 +28,6 @@ jobs:
           CI: true
         id: gradle
         run: .\gradlew build
-      - name: Upload common build
-        uses: actions/upload-artifact@v3
-        with:
-          name: common
-          path: build/libs/
       - name: Upload fabric build
         uses: actions/upload-artifact@v3
         with:
