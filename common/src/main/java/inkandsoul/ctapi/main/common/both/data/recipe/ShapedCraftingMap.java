@@ -6,11 +6,6 @@ import inkandsoul.ctapi.main.common.both.json.JsonArrayBuilder;
 import inkandsoul.ctapi.main.common.both.json.JsonObjectBuilder;
 import net.minecraft.resources.ResourceLocation;
 
-/**
- * @deprecated
- * I'm fool. Please replace by {@link net.minecraft.data.recipes.ShapedRecipeBuilder}
- */
-@Deprecated
 public class ShapedCraftingMap {
 
     private final SmallGrid<String> ids;
@@ -47,10 +42,6 @@ public class ShapedCraftingMap {
         return this;
     }
 
-    /**
-     * @deprecated
-     */
-    @Deprecated
     public String toRecipeJson(ResourceLocation result, int count){
         return toRecipeJsonNew(result, count).toString();
     }

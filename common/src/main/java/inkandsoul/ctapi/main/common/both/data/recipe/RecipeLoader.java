@@ -2,20 +2,27 @@ package inkandsoul.ctapi.main.common.both.data.recipe;
 
 import java.util.*;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.gson.JsonElement;
 import inkandsoul.ctapi.mixin.common.both.data.RecipeHooks;
+import net.minecraft.core.NonNullList;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.CraftingBookCategory;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.ShapedRecipe;
 
 /**
  *
  */
 public class RecipeLoader {
-    private static final Set<ResourceLocation> DELETE_RECPIES = new LinkedHashSet<>();
+    private static final Set<ResourceLocation> DELETE_RECIPES = new LinkedHashSet<>();
 
-    private static final Map<ResourceLocation, JsonElement> RECIPES = new LinkedHashMap<>();
+    private static final Map<ResourceLocation, JsonElement> JSON_RECIPES = new LinkedHashMap<>();
+    private static final Map<ResourceLocation, Recipe<?>> RECIPES = new LinkedHashMap<>();
 
     public static void remove(ResourceLocation id){
-        DELETE_RECPIES.add(id);
+        DELETE_RECIPES.add(id);
     }
 
     /**
@@ -24,6 +31,15 @@ public class RecipeLoader {
      * @param recipe Recipe context
      */
     public static void add(ResourceLocation id, JsonElement recipe){
+        JSON_RECIPES.put(id, recipe);
+    }
+
+    /**
+     * Add your recipe using JsonElement. This will be added in Minecraft.
+     * @param id The id of recipe
+     * @param recipe Recipe context
+     */
+    public static void addBuiltIn(ResourceLocation id, Recipe<?> recipe){
         RECIPES.put(id, recipe);
     }
 
@@ -34,8 +50,28 @@ public class RecipeLoader {
      * @param map map
      */
     public static void onRecipesReload(Map<ResourceLocation, JsonElement> map){
-        DELETE_RECPIES.forEach(map::remove);
+        DELETE_RECIPES.forEach(map::remove);
+        map.putAll(JSON_RECIPES);
+    }
+
+    /**
+     * <p>User shouldn't call this method.</p>
+     * <p>Must be used in {@link RecipeHooks} only!</p>
+     * @param map map
+     */
+    public static void onBuiltInRecipesPreReload(ImmutableMap.Builder<ResourceLocation, Recipe<?>> map){
         map.putAll(RECIPES);
+    }
+
+    /**
+     * <p>User shouldn't call this method.</p>
+     * <p>Must be used in {@link RecipeHooks} only!</p>
+     * @param map2 map
+     */
+    public static void onBuiltInRecipesReload(Map<RecipeType<?>, ImmutableMap.Builder<ResourceLocation, Recipe<?>>> map2){
+        RECIPES.forEach((resourceLocation,recipe)->{
+            map2.computeIfAbsent(recipe.getType(), recipeType -> ImmutableMap.builder()).put(resourceLocation, recipe);
+        });
     }
 
     // new ShapedRecipeBuilder(RecipeCategory.MISC, Items.AIR, 64)

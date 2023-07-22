@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ReloadableServerResources.class)
-public class TagAddHooks {
+public class TagHooks {
     @Inject(method = "updateRegistryTags(Lnet/minecraft/core/RegistryAccess;)V",
         at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/Blocks;rebuildCache()V"))
     public void tagReloadHooks(RegistryAccess registryAccess, CallbackInfo ci) {

@@ -10,8 +10,9 @@
     "both.accessors.MappedRegistryAccessor",
     "both.accessors.NamedAccessor",
     "both.block.BlockBehaviourMixin",
+    "both.data.AdvancementHooks",
     "both.data.RecipeHooks",
-    "both.data.TagAddHooks"
+    "both.data.TagHooks"
   ],
   "client": [
     "both.accessors.ItemRendererAccessors",

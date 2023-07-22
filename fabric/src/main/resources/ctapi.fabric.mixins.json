@@ -4,6 +4,7 @@
   "package": "inkandsoul.ctapi.mixin.fabric",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "both.CraftingResultSlotMixin",
     "both.FurnaceBlockEntityMixin"
   ],
   "client": [

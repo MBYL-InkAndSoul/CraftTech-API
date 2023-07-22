@@ -6,7 +6,7 @@ import net.minecraft.world.item.Item;
 
 public class ToolItem {
     @ExpectPlatform
-    static IToolItem of(MutableComponent name, Item.Properties properties) {
+    public static IToolItem of(MutableComponent name, Item.Properties properties) {
         throw new AssertionError();
     }
 }

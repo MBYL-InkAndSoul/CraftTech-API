@@ -10,9 +10,7 @@ public class CT_API {
 	public static final String MOD_ID = "ctapi";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static final Registration LOC = new Registration(MOD_ID);
-	//public static final CommonRegistrate REG = CommonRegistrate.of(MOD_ID);
 	public static boolean sRegInit = false;
-	//public static final Registrate t = Registrate.create("tt");
 
 	public static void sRegInit() {
 		if(sRegInit){
@@ -24,7 +22,6 @@ public class CT_API {
 		sRegInit = true;
 	}
 
-	//@SuppressWarnings("unchecked")
 	public static void init() {
 		//ShapedRecipeBuilder.shaped(Rec)
 

@@ -20,6 +20,7 @@ import java.util.Objects;
 public class CT_API_ClientForgeInit {
     @SubscribeEvent
     public void init(final FMLClientSetupEvent event){
+        CT_API_Client.init();
         ItemRenderEvent.EVENT.register((stack, mode, pose, mbs, light, overlay) -> {
             if(stack.getItem() instanceof ModelItem){
                 var mc = Minecraft.getInstance();

@@ -16,18 +16,7 @@ public class CT_API_ClientFabricInit implements ClientModInitializer {
         ModelLoadingRegistry.INSTANCE.registerResourceProvider(rl->new ModelLoaderFabric());
         ModelLoadingRegistry.INSTANCE.registerVariantProvider(rl->new ModelLoaderFabric());
 
+        CT_API_Client.init();
         //BuiltinItemRendererRegistry.INSTANCE.register(CT_API_FabricInit.MODEL, new ModelItemRenderer());
-        ClientTooltipEvent.ITEM.register((stack, lines, flag) -> {
-            if(flag.isAdvanced()) {
-                lines.add(Component.literal("Tag(s):"));
-                var texts = new LinkedHashSet<>(stack.getTags().map(
-                    tag -> Component.literal("-" + tag.location()).withStyle(ChatFormatting.GRAY)).toList());
-                if(stack.getItem() instanceof BlockItem o){
-                    texts.addAll(o.getBlock().defaultBlockState().getTags().map(
-                        tag -> Component.literal("-" + tag.location()).withStyle(ChatFormatting.GRAY)).toList());
-                }
-                lines.addAll(texts);
-            }
-        });
     }
 }
