@@ -11,10 +11,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
 /**
  * Extends {@link Block} class.
  * <p>Contains some more features.</p>
  */
+@ParametersAreNonnullByDefault
 public class BaseBlock extends Block {
 
     public BaseBlock(Properties properties) {

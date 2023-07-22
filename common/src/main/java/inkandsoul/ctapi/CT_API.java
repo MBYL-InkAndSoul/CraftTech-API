@@ -2,14 +2,14 @@ package inkandsoul.ctapi;
 
 import inkandsoul.ctapi.main.common.both.registry.SRegistries;
 import inkandsoul.ctapi.main.common.both.registry.SResourceKeys;
-import inkandsoul.ctapi.main.common.both.util.Registration;
+import inkandsoul.ctapi.expect.registry.Registration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class CT_API {
 	public static final String MOD_ID = "ctapi";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final Registration LOC = new Registration(MOD_ID);
+	public static final Registration LOC = Registration.of(MOD_ID);
 	public static boolean sRegInit = false;
 
 	public static void sRegInit() {

@@ -24,6 +24,10 @@ subprojects {
         }
         maven { url = "https://mvn.devos.one/snapshots/" }
         maven { url 'https://jitpack.io' }
+        maven {
+            name = "Fuzs Mod Resources"
+            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+        }
     }
 
     dependencies {

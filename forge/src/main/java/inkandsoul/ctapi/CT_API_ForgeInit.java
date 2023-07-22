@@ -4,6 +4,7 @@ import dev.architectury.platform.forge.EventBuses;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -22,8 +23,11 @@ public class CT_API_ForgeInit {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         EventBuses.registerModEventBus(CT_API.MOD_ID, bus);
         bus.register(this);
+    }
 
-
+    @SubscribeEvent
+    public void config(final ModConfigEvent.Loading event) {
+        CT_API_Values.HARDCORE_BREAK = CT_API_Config.Server.HARDCORE_BREAK.get();
     }
 
     @SubscribeEvent
