@@ -7,12 +7,15 @@
     "both.WashableHooks",
     "both.accessors.AbstractCauldronBlockAccessor",
     "both.accessors.BlockItemAccessor",
+    "both.accessors.EntityAccessor",
     "both.accessors.MappedRegistryAccessor",
     "both.accessors.NamedAccessor",
     "both.block.BlockBehaviourMixin",
+    "both.block.BlockEntityMixin",
     "both.data.AdvancementHooks",
     "both.data.RecipeHooks",
-    "both.data.TagHooks"
+    "both.data.TagHooks",
+    "both.entity.EntityMixin"
   ],
   "client": [
     "both.accessors.ItemRendererAccessors",

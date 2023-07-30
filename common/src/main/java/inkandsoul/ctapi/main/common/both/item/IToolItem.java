@@ -1,12 +1,9 @@
-package inkandsoul.ctapi.expect.item;
+package inkandsoul.ctapi.main.common.both.item;
 
-import dev.architectury.injectables.annotations.ExpectPlatform;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;

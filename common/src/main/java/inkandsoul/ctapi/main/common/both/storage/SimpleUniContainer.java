@@ -10,6 +10,9 @@ import net.minecraft.world.Containers;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
 public class SimpleUniContainer implements UniContainer {
 
@@ -22,7 +25,7 @@ public class SimpleUniContainer implements UniContainer {
 
     private SimpleUniContainer(int containerSize, int tankSize) {
         container = NonNullList.withSize(containerSize, ItemStack.EMPTY);
-        tank = NonNullList.withSize(containerSize, FluidStack.empty());
+        tank = NonNullList.withSize(tankSize, FluidStack.empty());
     }
 
     @Override

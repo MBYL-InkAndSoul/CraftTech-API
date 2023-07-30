@@ -1,65 +1,32 @@
 package inkandsoul.ctapi;
 
+import dev.architectury.platform.Platform;
+import dev.architectury.registry.ReloadListenerRegistry;
+import dev.architectury.registry.fuel.FuelRegistry;
+import inkandsoul.ctapi.expect.CT_API_ExpectConfig;
+import inkandsoul.ctapi.expect.registry.Registration;
 import inkandsoul.ctapi.main.common.both.registry.SRegistries;
 import inkandsoul.ctapi.main.common.both.registry.SResourceKeys;
-import inkandsoul.ctapi.expect.registry.Registration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import inkandsoul.ctapi.main.common.both.util.LoggerUtil;
+import net.minecraft.server.packs.PackType;
 
 public class CT_API {
 	public static final String MOD_ID = "ctapi";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final Registration LOC = Registration.of(MOD_ID);
+	public static final LoggerUtil.PackagedLogger LOGGER = LoggerUtil.get("CT-API", MOD_ID);
+	public static final Registration REG = Registration.of(MOD_ID);
 	public static boolean sRegInit = false;
 
 	public static void sRegInit() {
 		if(sRegInit){
 			return;
 		}
-		//REG.item(Item::new);
 		SResourceKeys.init();
 		SRegistries.init();
 		sRegInit = true;
 	}
 
 	public static void init() {
-		//ShapedRecipeBuilder.shaped(Rec)
-
-		//RecipeLoader.add(new ResourceLocation("crafting_table"), GsonHelper.parse("""
-		//
-		//	"""));
-
-		//RecipeLoader.remove(new ResourceLocation("minecraft","crafting_table"));
-		//
-		//RecipeLoader.add(LOC.of("crafting_table"), GsonHelper.parse("""
-		//	{
-		//	  "type": "minecraft:crafting_shaped",
-		//	  "category": "misc",
-		//	  "key": {
-		//	    "S": {
-		//	      "item": "minecraft:cobblestone"
-		//	    },
-		//	    "#": {
-		//	      "tag": "minecraft:logs"
-		//	    }
-		//	  },
-		//	  "pattern": [
-		//	    "SS",
-		//	    "##"
-		//	  ],
-		//	  "result": {
-		//	    "item": "minecraft:crafting_table"
-		//	  },
-		//	  "show_notification": false
-		//	}
-		//	"""));
-		//RecipeReloadEvent.EVENT.register((recipes) -> {
-		//	recipes.put();
-		//	//byName.put(LOC.of("test"), new ShapedRecipe(LOC.of("test"), "test", CraftingBookCategory.MISC, 3, 3, NonNullList.of(Ingr)))
-		//});
-
-
-
+		CT_API_ExpectConfig.init();
 
 		//TagsReloadEvent.EVENT.register(ra -> {
 		//	Registry<Block> reg = ra.registryOrThrow(Registries.BLOCK);

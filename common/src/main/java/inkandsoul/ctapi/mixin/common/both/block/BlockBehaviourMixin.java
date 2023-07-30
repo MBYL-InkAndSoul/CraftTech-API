@@ -3,6 +3,7 @@ package inkandsoul.ctapi.mixin.common.both.block;
 import inkandsoul.ctapi.main.common.both.block.BaseBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
@@ -36,7 +37,7 @@ public class BlockBehaviourMixin {
                 (
                     // You can destroy grass by hand
                     blockState.getBlock().defaultDestroyTime() > 0f &&
-                    player.getMainHandItem().isEmpty()
+                    player.getMainHandItem().getItem() != Items.FLINT
                 )
             )
         ) {

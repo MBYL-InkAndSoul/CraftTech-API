@@ -19,4 +19,5 @@ public interface ISRegistry<ID, OBJ> {
 
     OBJ delete(ID id);
 
+    void freeze();
 }

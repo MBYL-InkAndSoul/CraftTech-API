@@ -7,6 +7,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import org.jetbrains.annotations.NotNull;
 
@@ -83,6 +84,10 @@ public class TagUtil {
     }
 
     public static <T> TagKey<T> makeTag(ResourceKey<Registry<T>> key, String form, String material) {
-        return TagMaker.makeTag(key, form, material);
+        return TagKey.create(key, makeTagId(form, material));
+    }
+
+    public static ResourceLocation makeTagId(String form, String material) {
+        return TagMaker.makeTagId(form, material);
     }
 }

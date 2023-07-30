@@ -7,8 +7,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 
 public class TagMakerImpl {
-    public static <T> TagKey<T> makeTag(ResourceKey<Registry<T>> key, String form, String material) {
-        return  TagKey.create(key,
-            new ResourceLocation("forge", form + "s/" + material));
+
+    public static ResourceLocation makeTagId(String form, String material) {
+        return new ResourceLocation("forge", form + "s/" + material);
     }
 }

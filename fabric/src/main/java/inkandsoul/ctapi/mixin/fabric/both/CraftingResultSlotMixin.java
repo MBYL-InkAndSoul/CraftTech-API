@@ -1,6 +1,6 @@
 package inkandsoul.ctapi.mixin.fabric.both;
 
-import inkandsoul.ctapi.expect.item.IToolItem;
+import inkandsoul.ctapi.main.common.both.item.IToolItem;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.CraftingContainer;

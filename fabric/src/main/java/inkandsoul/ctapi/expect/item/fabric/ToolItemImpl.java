@@ -1,13 +1,12 @@
 package inkandsoul.ctapi.expect.item.fabric;
 
-import inkandsoul.ctapi.expect.item.IToolItem;
+import inkandsoul.ctapi.main.common.both.item.IToolItem;
+import inkandsoul.ctapi.main.common.both.item.BaseItem;
 import inkandsoul.ctapi.main.fabric.both.tool.FabricBaseToolItem;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.world.item.Item;
 
 public class ToolItemImpl {
 
-    public static IToolItem of(MutableComponent name, Item.Properties properties) {
-        return new FabricBaseToolItem(name, properties);
+    public static IToolItem of(BaseItem.BaseProperties properties) {
+        return new FabricBaseToolItem(properties);
     }
 }

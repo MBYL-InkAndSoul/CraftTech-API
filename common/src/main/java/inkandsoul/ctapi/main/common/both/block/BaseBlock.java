@@ -1,5 +1,6 @@
 package inkandsoul.ctapi.main.common.both.block;
 
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.BlockPos;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Map;
 
 /**
  * Extends {@link Block} class.
@@ -20,7 +22,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 public class BaseBlock extends Block {
 
-    public BaseBlock(Properties properties) {
+    public BaseBlock(Properties properties, BaseProperties baseProperties) {
         super(properties);
     }
 
@@ -30,9 +32,29 @@ public class BaseBlock extends Block {
     @Override
     public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, 
             @Nullable BlockEntity blockEntity, ItemStack stack) {
-        player.awardStat(Stats.BLOCK_MINED.get(this));
-        player.causeFoodExhaustion(0.005F);
+        playerPreDestroy(this, player);
         popResource(level, pos, new ItemStack(this.asItem()));
     }
+
+    public static void playerPreDestroy(Block block, Player player) {
+        player.awardStat(Stats.BLOCK_MINED.get(block));
+        player.causeFoodExhaustion(0.005F);
+    }
+
+    public static class BaseProperties {
+        /**
+         * @see DropBlock
+         */
+        private Map<ItemStack, Integer> drops = Map.of();
+
+        public Map<ItemStack, Integer> getDrops() {
+            return drops;
+        }
+
+        public void drops(Map<ItemStack, Integer> drops) {
+            this.drops = drops;
+        }
+    }
+
 
 }

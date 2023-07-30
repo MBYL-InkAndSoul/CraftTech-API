@@ -18,7 +18,8 @@ public class SRegistry<ID, OBJ> implements ISRegistry<ID, OBJ> {
         this.key = key;
         this.map = new LinkedHashMap<>();
     }
-    
+
+    @Override
     public void freeze() {
         freeze = true;
     }

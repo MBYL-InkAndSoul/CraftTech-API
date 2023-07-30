@@ -1,16 +1,13 @@
 package inkandsoul.ctapi.main.fabric.both.tool;
 
-import inkandsoul.ctapi.expect.item.IToolItem;
-import inkandsoul.ctapi.expect.item.fabric.ToolItemImpl;
+import inkandsoul.ctapi.main.common.both.item.IToolItem;
 import inkandsoul.ctapi.main.common.both.item.BaseItem;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.ItemStack;
 
 public class FabricBaseToolItem extends BaseItem implements IToolItem {
 
-    public FabricBaseToolItem(MutableComponent name, Properties properties) {
-        super(name, properties);
+    public FabricBaseToolItem(BaseProperties properties) {
+        super(properties);
     }
 
     @Override

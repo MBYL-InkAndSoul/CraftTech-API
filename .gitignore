@@ -31,7 +31,7 @@ atlassian-ide-plugin.xml
 *.tar.gz
 *.rar
 
-# virtual machineProperties crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# virtual machineType crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
 *~

@@ -11,7 +11,7 @@ public class FabricBaseTieredItem extends FabricBaseToolItem {
 
     protected final Tier tier;
 
-    public FabricBaseTieredItem(MutableComponent name, Tier tier, Properties properties) {
+    public FabricBaseTieredItem(MutableComponent name, Tier tier, BaseProperties properties) {
         super(name, properties);
         this.tier = tier;
     }

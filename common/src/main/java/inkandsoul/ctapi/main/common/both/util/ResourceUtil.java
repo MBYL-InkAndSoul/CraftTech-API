@@ -13,16 +13,19 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ResourceUtil {
 
+    @Deprecated
     public static ResourceLocation of(String id){
         return new ResourceLocation(CT_API.MOD_ID, id);
     }
 
+    @Deprecated
     public static ResourceLocation ofTag(String id){
         return new ResourceLocation(CT_API.MOD_ID, id);
     }
 
+    @Deprecated
     public static ModelResourceLocation ofModel(String id, String variant){
-        return new ModelResourceLocation(CT_API.LOC.ofId(id), variant);
+        return new ModelResourceLocation(CT_API.REG.ofId(id), variant);
     }
 
     public static BlockModel loadJsonModelFromString(ResourceLocation id, String model){

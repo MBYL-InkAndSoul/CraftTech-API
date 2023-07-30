@@ -1,11 +1,7 @@
 package inkandsoul.ctapi.main.forge.both.item;
 
-import inkandsoul.ctapi.expect.item.IToolItem;
-import inkandsoul.ctapi.expect.item.forge.ToolItemImpl;
+import inkandsoul.ctapi.main.common.both.item.IToolItem;
 import inkandsoul.ctapi.main.common.both.item.BaseItem;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -13,8 +9,8 @@ import net.minecraft.world.item.ItemStack;
 import java.util.function.Consumer;
 
 public class ForgeBaseToolItem extends BaseItem implements IToolItem {
-    public ForgeBaseToolItem(MutableComponent name, Properties properties) {
-        super(name, properties);
+    public ForgeBaseToolItem(BaseProperties properties) {
+        super(properties);
     }
 
     @Override
