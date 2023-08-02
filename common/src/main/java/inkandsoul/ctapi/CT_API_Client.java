@@ -17,18 +17,21 @@ public class CT_API_Client {
             if (flag.isAdvanced()) {
                 if (stack.getTags().toArray().length > 0) {
                     if (Screen.hasShiftDown()) {
-                        lines.add(Component.literal("Tag(s):"));
                         var texts = new LinkedHashSet<>(
                             stack.getTags().map(tag ->
                                 Component.literal("-" + tag.location()).withStyle(ChatFormatting.GRAY)
                             ).toList()
                         );
                         if (stack.getItem() instanceof BlockItem o){
+                            lines.add(Component.literal("Item Tag(s):"));
+                            texts.add(Component.literal("Block Tag(s):"));
                             texts.addAll(
                                 o.getBlock().defaultBlockState().getTags().map(tag ->
                                     Component.literal("-" + tag.location()).withStyle(ChatFormatting.GRAY)
                                 ).toList()
                             );
+                        } else {
+                            lines.add(Component.literal("Tag(s):"));
                         }
                         lines.addAll(texts);
                     } else {
