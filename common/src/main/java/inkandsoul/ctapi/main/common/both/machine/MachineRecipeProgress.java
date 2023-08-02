@@ -2,7 +2,6 @@ package inkandsoul.ctapi.main.common.both.machine;
 
 import inkandsoul.ctapi.main.common.both.recipe.machine.RecipeFactory;
 import inkandsoul.ctapi.main.common.both.storage.UniContainer;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
 public class MachineRecipeProgress {

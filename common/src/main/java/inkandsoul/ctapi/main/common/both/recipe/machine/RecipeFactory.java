@@ -12,8 +12,13 @@ import java.util.Map;
 public class RecipeFactory {
     private List<Recipe> recipes = List.of();
 
-    public void matches() {
-
+    public boolean matches(UniContainer c) {
+        for (var r : recipes) {
+            if (!r.match(c)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void bind(List<Recipe> recipes) {

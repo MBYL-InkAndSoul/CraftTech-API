@@ -9,13 +9,11 @@ public interface EnergyType<T extends Number> {
 
     boolean canOut(EnergyStorage<T> self,
                    EnergyStorage<T> target,
-                   T value,
-                   boolean closure);
+                   T value);
 
    boolean canIn(EnergyStorage<T> self,
                  EnergyStorage<T> target,
-                 T value,
-                 boolean closure);
+                 T value);
 
     @NotNull
     String getId();

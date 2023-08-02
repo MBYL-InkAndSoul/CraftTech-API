@@ -19,8 +19,7 @@ public class SimpleEnergyType implements EnergyType<Integer> {
     public boolean canOut(
         EnergyStorage<Integer> self,
         EnergyStorage<Integer> target,
-        Integer value,
-        boolean closure)
+        Integer value)
     {
         return (target.getType() == this) && (self.get() >= value) && (target.get() + value < target.getMax());
     }
@@ -29,8 +28,7 @@ public class SimpleEnergyType implements EnergyType<Integer> {
     public boolean canIn(
         EnergyStorage<Integer> self,
         EnergyStorage<Integer> target,
-        Integer value,
-        boolean closure)
+        Integer value)
     {
         return (target.getType() == this) && (target.get() >= value) && (self.get() + value < self.getMax());
     }

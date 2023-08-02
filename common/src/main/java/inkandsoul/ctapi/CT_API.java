@@ -1,20 +1,27 @@
 package inkandsoul.ctapi;
 
-import dev.architectury.platform.Platform;
-import dev.architectury.registry.ReloadListenerRegistry;
-import dev.architectury.registry.fuel.FuelRegistry;
+import com.tterrag.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.util.entry.RegistryEntry;
+import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import inkandsoul.ctapi.expect.CT_API_ExpectConfig;
+import inkandsoul.ctapi.expect.item.ModelItem;
 import inkandsoul.ctapi.expect.registry.Registration;
 import inkandsoul.ctapi.main.common.both.registry.SRegistries;
 import inkandsoul.ctapi.main.common.both.registry.SResourceKeys;
 import inkandsoul.ctapi.main.common.both.util.LoggerUtil;
-import net.minecraft.server.packs.PackType;
+import net.minecraft.client.KeyboardHandler;
+import net.minecraft.world.item.Item;
 
 public class CT_API {
 	public static final String MOD_ID = "ctapi";
 	public static final LoggerUtil.PackagedLogger LOGGER = LoggerUtil.get("CT-API", MOD_ID);
-	public static final Registration REG = Registration.of(MOD_ID);
+	public static final NonNullSupplier<Registration> REG = NonNullSupplier.lazy(() -> Registration.of(MOD_ID));
+	public static final RegistryEntry<ModelItem> MODEL_ITEM = REG.get().item("model", properties -> ModelItem.of()).register();
 	public static boolean sRegInit = false;
+
+	public static void staticInit() {
+
+	}
 
 	public static void sRegInit() {
 		if(sRegInit){
@@ -40,8 +47,6 @@ public class CT_API {
 
 
 	}
-
-	//public static final Item MODEL_ITEM = CommonRegistries.ITEM.register(LOC.of("model"), ModelItem.of());
 
 //	public static final RegistrySupplier<Item> MODEL = ModRegistries.ITEMS.register("model_item", () -> MODEL_ITEM);
 

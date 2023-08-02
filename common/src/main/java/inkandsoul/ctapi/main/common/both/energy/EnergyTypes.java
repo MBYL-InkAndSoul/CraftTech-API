@@ -3,8 +3,8 @@ package inkandsoul.ctapi.main.common.both.energy;
 import net.minecraft.network.chat.Component;
 
 public final class EnergyTypes {
-    public static final EnergyType<Integer> EE =
-        new SimpleEnergyType(Component.literal("Electrical Energy"), "ee", "J");
+    public static final EnergyType<Long> EE =
+        new ElectricalEnergyType(Component.literal("Electrical Energy"), "ee", "J");
 
     public static final EnergyType<Integer> LE =
         new SimpleEnergyType(Component.literal("Luminous Energy"), "le", "J");

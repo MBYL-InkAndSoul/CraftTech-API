@@ -25,7 +25,7 @@ public class ResourceUtil {
 
     @Deprecated
     public static ModelResourceLocation ofModel(String id, String variant){
-        return new ModelResourceLocation(CT_API.REG.ofId(id), variant);
+        return new ModelResourceLocation(CT_API.REG.get().ofId(id), variant);
     }
 
     public static BlockModel loadJsonModelFromString(ResourceLocation id, String model){

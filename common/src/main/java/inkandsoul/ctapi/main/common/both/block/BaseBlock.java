@@ -1,6 +1,5 @@
 package inkandsoul.ctapi.main.common.both.block;
 
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.BlockPos;

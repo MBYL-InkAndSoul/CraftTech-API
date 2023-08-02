@@ -21,7 +21,7 @@ dependencies {
     // Remove the next line if you don't want to depend on the API
     modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
 
-    modApi "maven.modrinth:forge-config-api-port:${rootProject.forge_config_version}"
+    modImplementation "maven.modrinth:forge-config-api-port:${rootProject.forge_config_version}"
     common(project(path: ":ct-api-common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":ct-api-common", configuration: "transformProductionFabric")) { transitive false }
 

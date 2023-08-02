@@ -1,12 +1,9 @@
 package inkandsoul.ctapi.main.common.both.storage;
 
 import dev.architectury.fluid.FluidStack;
-import dev.architectury.hooks.fluid.FluidBucketHooks;
-import dev.architectury.hooks.fluid.FluidStackHooks;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.ContainerHelper;
-import net.minecraft.world.Containers;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 

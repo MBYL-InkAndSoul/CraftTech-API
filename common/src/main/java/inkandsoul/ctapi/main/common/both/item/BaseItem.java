@@ -4,11 +4,8 @@ import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 /**
  * <p>僅BlockItem, NullItem與該類無關。</p>

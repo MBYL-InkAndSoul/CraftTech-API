@@ -7,6 +7,6 @@ import net.minecraft.world.level.material.Fluid;
 
 public class BaseFluidTags {
 
-    public static final TagKey<Fluid> WATER_LIKE = TagKey.create(Registries.FLUID, CT_API.REG.ofId("water_like"));
+    public static final TagKey<Fluid> WATER_LIKE = TagKey.create(Registries.FLUID, CT_API.REG.get().ofId("water_like"));
 
 }

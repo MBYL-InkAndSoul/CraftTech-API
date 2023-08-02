@@ -3,18 +3,20 @@ package inkandsoul.ctapi.main.common.both.storage.fluid;
 import dev.architectury.fluid.FluidStack;
 import inkandsoul.ctapi.main.common.both.item.BaseItem;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
 public class SimpleTankItem extends BaseItem implements ItemTank {
 
     private final int tankSize;
     FluidStack tank = FluidStack.empty();
 
-    public SimpleTankItem(MutableComponent name, Properties properties, int tankSize) {
-        super(name, properties);
+    public SimpleTankItem(BaseProperties properties, int tankSize) {
+        super(properties);
         this.tankSize = tankSize;
     }
 

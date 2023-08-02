@@ -15,7 +15,8 @@
     "both.data.AdvancementHooks",
     "both.data.RecipeHooks",
     "both.data.TagHooks",
-    "both.entity.EntityMixin"
+    "both.entity.EntityMixin",
+    "client.rendering.ItemRendererMixin"
   ],
   "client": [
     "both.accessors.ItemRendererAccessors",

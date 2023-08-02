@@ -1,7 +1,10 @@
 package inkandsoul.ctapi;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import dev.architectury.event.events.client.ClientTooltipEvent;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 
@@ -10,15 +13,28 @@ import java.util.LinkedHashSet;
 public class CT_API_Client {
     public static void init() {
         ClientTooltipEvent.ITEM.register((stack, lines, flag) -> {
-            if(flag.isAdvanced()) {
-                lines.add(Component.literal("Tag(s):"));
-                var texts = new LinkedHashSet<>(stack.getTags().map(
-                    tag -> Component.literal("-" + tag.location()).withStyle(ChatFormatting.GRAY)).toList());
-                if(stack.getItem() instanceof BlockItem o){
-                    texts.addAll(o.getBlock().defaultBlockState().getTags().map(
-                        tag -> Component.literal("-" + tag.location()).withStyle(ChatFormatting.GRAY)).toList());
+            //var mc = Minecraft.getInstance();
+            if (flag.isAdvanced()) {
+                if (stack.getTags().toArray().length > 0) {
+                    if (Screen.hasShiftDown()) {
+                        lines.add(Component.literal("Tag(s):"));
+                        var texts = new LinkedHashSet<>(stack.getTags().map(
+                            tag -> Component.literal("-" + tag.location()).withStyle(ChatFormatting.GRAY)).toList());
+                        if (stack.getItem() instanceof BlockItem o){
+                            texts.addAll(o.getBlock().defaultBlockState().getTags().map(
+                                tag -> Component.literal("-" + tag.location()).withStyle(ChatFormatting.GRAY)).toList());
+                        }
+                        lines.addAll(texts);
+                    } else {
+                        lines.add(Component.literal("Press §e[Shift]§r show tag(s)"));
+                    }
                 }
-                lines.addAll(texts);
+                //if (stack.getTag() != null) {
+                //    stack.getTag().getAllKeys().forEach(i->{
+                //        lines.add(Component.literal(i));
+                //    });
+                //    //lines.addAll(Component.literal())
+                //}
             }
         });
     }

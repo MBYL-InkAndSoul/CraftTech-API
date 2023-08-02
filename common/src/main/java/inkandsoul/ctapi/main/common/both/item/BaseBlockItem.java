@@ -10,9 +10,9 @@ import org.jetbrains.annotations.NotNull;
 public class BaseBlockItem extends BlockItem implements IBaseItem {
     protected final MutableComponent name;
 
-    public BaseBlockItem(Block block, MutableComponent name, Properties properties) {
+    public BaseBlockItem(Block block, BaseItem.BaseProperties properties) {
         super(block, properties);
-        this.name = name;
+        this.name = properties.getName();
     }
 
     @Override
@@ -21,7 +21,7 @@ public class BaseBlockItem extends BlockItem implements IBaseItem {
     }
 
     @Override
-    public @NotNull Component getName(ItemStack stack) {
+    public @NotNull Component getName(@NotNull ItemStack stack) {
         return name;
     }
 }

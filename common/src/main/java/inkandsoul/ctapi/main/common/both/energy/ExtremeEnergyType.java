@@ -20,13 +20,13 @@ public class ExtremeEnergyType implements EnergyType<Long> {
     }
 
     @Override
-    public boolean canOut(EnergyStorage<Long> self, EnergyStorage<Long> target, Long value, boolean closure) {
-        return false;
+    public boolean canOut(EnergyStorage<Long> self, EnergyStorage<Long> target, Long value) {
+        return (target.getType() == this) && (self.get() >= value) && (target.get() + value < target.getMax());
     }
 
     @Override
-    public boolean canIn(EnergyStorage<Long> self, EnergyStorage<Long> target, Long value, boolean closure) {
-        return false;
+    public boolean canIn(EnergyStorage<Long> self, EnergyStorage<Long> target, Long value) {
+        return (target.getType() == this) && (target.get() >= value) && (self.get() + value < self.getMax());
     }
 
     @Override

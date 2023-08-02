@@ -1,8 +1,6 @@
 package inkandsoul.ctapi.main.common.both.storage.fluid;
 
 import dev.architectury.fluid.FluidStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.material.Fluid;
 
 public interface Tank {

@@ -6,9 +6,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@ParametersAreNonnullByDefault
 public class PipeBlock extends BaseBlock {
-    public PipeBlock(Properties properties) {
-        super(properties);
+    public PipeBlock(Properties properties, BaseProperties p2) {
+        super(properties, p2);
     }
 
     @SuppressWarnings("deprecation")

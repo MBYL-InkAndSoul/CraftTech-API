@@ -1,7 +1,7 @@
 {
   "injected_interfaces": {
     "net/minecraft/class_2586": [
-      "inkandsoul/ctapi/main/common/both/block/CT_BlockEntity"
+      "inkandsoul/ctapi/main/common/both/block/hooks/CT_BlockEntity"
     ]
   }
 }

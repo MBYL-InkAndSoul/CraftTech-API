@@ -1,14 +1,13 @@
 package inkandsoul.ctapi;
 
-import inkandsoul.ctapi.main.common.client.renderer.ItemRenderEvent;
 import inkandsoul.ctapi.expect.item.ModelItem;
+import inkandsoul.ctapi.main.common.client.renderer.ItemRenderEvent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -16,10 +15,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Objects;
 
-@Mod.EventBusSubscriber(modid = CT_API.MOD_ID, value = {Dist.CLIENT})
+@Mod.EventBusSubscriber(modid = CT_API.MOD_ID, value = {Dist.CLIENT}, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CT_API_ClientForgeInit {
     @SubscribeEvent
-    public void init(final FMLClientSetupEvent event){
+    public static void init(final FMLClientSetupEvent event){
         CT_API_Client.init();
         ItemRenderEvent.EVENT.register((stack, mode, pose, mbs, light, overlay) -> {
             if(stack.getItem() instanceof ModelItem){
@@ -49,9 +48,9 @@ public class CT_API_ClientForgeInit {
         });
     }
 
-    @SubscribeEvent
-    public void addModel(final ModelEvent.RegisterAdditional event) {
-
-    }
+    //@SubscribeEvent
+    //public void addModel(final ModelEvent.RegisterAdditional event) {
+    //
+    //}
 
 }

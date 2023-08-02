@@ -8,5 +8,6 @@ public class CT_API_FabricInit implements ModInitializer {
     public void onInitialize() {
         CT_API.sRegInit();
         CT_API.init();
+        CT_API.REG.get().register();
     }
 }

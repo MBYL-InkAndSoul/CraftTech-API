@@ -1,6 +1,7 @@
 package inkandsoul.ctapi.main.common.both.registry;
 
 import inkandsoul.ctapi.main.common.both.energy.EnergyType;
+import inkandsoul.ctapi.main.common.both.energy.EnergyTypes;
 import inkandsoul.ctapi.main.common.both.machine.MachineType;
 import inkandsoul.ctapi.main.common.both.recipe.fluid.FluidTagValue;
 import inkandsoul.ctapi.main.common.both.registry.event.SRegisterEvent;
@@ -22,10 +23,14 @@ public final class SRegistries {
     public static final ISRegistry<String, EnergyType<?>> ENERGY_TYPE =
         new SRegistry<>(SResourceKeys.ENERGY_TYPE);
 
+    static {
+        EnergyTypes.init();
+    }
+
     public static void init() {
-        REGISTRIES.register(SResourceKeys.MACHINE_KEY.registry(), MACHINE);
-        REGISTRIES.register(SResourceKeys.FLUID_TAG_VALUE_KEY.registry(), FLUID_TAG_VALUE);
-        REGISTRIES.register(SResourceKeys.ENERGY_TYPE.registry(), ENERGY_TYPE);
+        REGISTRIES.register(SResourceKeys.MACHINE_KEY.location(), MACHINE);
+        REGISTRIES.register(SResourceKeys.FLUID_TAG_VALUE_KEY.location(), FLUID_TAG_VALUE);
+        REGISTRIES.register(SResourceKeys.ENERGY_TYPE.location(), ENERGY_TYPE);
         SRegisterEvent.EVENT.invoker().onRegister();
         freeze();
     }

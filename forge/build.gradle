@@ -34,10 +34,11 @@ dependencies {
     modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
     modApi(files("libs/ForgeYourself-${project.fys_version}.jar"))
 
+    modApi(include("com.tterrag.registrate:Registrate:${project.registrate}"))
+
     common(project(path: ":ct-api-common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":ct-api-common", configuration: "transformProductionForge")) { transitive = false }
 
-    modApi(include("com.tterrag.registrate:Registrate:${project.registrate}"))
 }
 
 project.archivesBaseName += '-'+loom.getPlatform().get().name()

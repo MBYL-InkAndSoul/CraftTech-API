@@ -2,14 +2,11 @@ package inkandsoul.ctapi.expect.registry;
 
 import com.google.gson.JsonElement;
 import com.tterrag.registrate.Registrate;
-import com.tterrag.registrate.builders.ItemBuilder;
-import com.tterrag.registrate.util.nullness.NonNullFunction;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import inkandsoul.ctapi.main.common.client.data.model.ModelLoader;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.ApiStatus;
 
 @MethodsReturnNonnullByDefault

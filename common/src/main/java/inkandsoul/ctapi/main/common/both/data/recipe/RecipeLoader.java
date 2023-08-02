@@ -5,12 +5,9 @@ import java.util.*;
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.JsonElement;
 import inkandsoul.ctapi.mixin.common.both.data.RecipeHooks;
-import net.minecraft.core.NonNullList;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.item.crafting.ShapedRecipe;
 
 /**
  *
