@@ -19,7 +19,13 @@ public class SpecialItemRenderer extends BlockEntityWithoutLevelRenderer {
 
     @ParametersAreNonnullByDefault
     @Override
-    public void renderByItem(ItemStack stack, ItemDisplayContext arg2, PoseStack arg3, MultiBufferSource arg4, int i, int j) {
+    public void renderByItem(ItemStack stack,
+                             ItemDisplayContext arg2,
+                             PoseStack arg3,
+                             MultiBufferSource arg4,
+                             int i,
+                             int j)
+    {
         ItemRenderEvent.EVENT.invoker().render(stack, arg2, arg3, arg4, i, j);
     }
 }

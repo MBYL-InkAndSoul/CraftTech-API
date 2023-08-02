@@ -2,8 +2,10 @@ package inkandsoul.ctapi;
 
 import inkandsoul.ctapi.expect.item.ModelItem;
 import inkandsoul.ctapi.main.common.client.renderer.ItemRenderEvent;
+import inkandsoul.ctapi.main.forge.client.SpecialItemRenderer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -17,6 +19,12 @@ import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = CT_API.MOD_ID, value = {Dist.CLIENT}, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CT_API_ClientForgeInit {
+
+    public static final BlockEntityWithoutLevelRenderer BEWLR_Instance = new SpecialItemRenderer(
+        Minecraft.getInstance().getBlockEntityRenderDispatcher(),
+        Minecraft.getInstance().getEntityModels()
+    );
+
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent event){
         CT_API_Client.init();
@@ -29,8 +37,7 @@ public class CT_API_ClientForgeInit {
                 try {
                     stack2 = new ItemStack(
                         Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(
-                            ResourceLocation.tryParse(nbt.getString("Display")
-                            )
+                            ResourceLocation.tryParse(nbt.getString("Display"))
                         ))
                     );
                     var renderer = mc.getItemRenderer();
